@@ -1,0 +1,632 @@
+/* Form and content pages: Account/Register, Contact/Index (/contactform), Car/Index (/car/home), About/Index (/about).
+   Builds on the tokens and .mv-btn from site-modern.css (and the section components in home-responsive.css).
+   Form styles are scoped to .mv-auth-form; page blocks to .mv-auth / .mv-auth-hero / .mv-page-*, so the legacy theme is left untouched. */
+
+/* ---------- Hero ---------- */
+.mv-auth-hero {
+    position: relative;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+    padding: 56px 0 96px;
+    /* Same subheader photo as the rest of the site; it already fades to navy on the left, so only a light tint is added. */
+    background:
+        linear-gradient(90deg, rgba(26, 29, 42, .3) 0%, rgba(26, 29, 42, 0) 60%),
+        url(../extra-images/subheader-image.jpg) right center / cover no-repeat;
+    background-color: var(--mv-navy);
+    color: var(--mv-white);
+    font-family: var(--mv-font);
+    overflow: hidden;
+}
+
+.mv-auth-hero__crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 14px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.mv-auth-hero__crumbs li {
+    list-style: none;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, .7);
+}
+
+.mv-auth-hero__crumbs li + li::before {
+    content: "/";
+    margin-right: 8px;
+    color: rgba(255, 255, 255, .4);
+}
+
+.mv-auth-hero__crumbs a {
+    color: var(--mv-primary);
+}
+
+.mv-auth-hero__crumbs a:hover,
+.mv-auth-hero__crumbs a:focus {
+    color: var(--mv-white);
+    text-decoration: none;
+}
+
+.mv-auth-hero__title {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--mv-white);
+}
+
+.mv-auth-hero__lead {
+    max-width: 560px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, .78);
+}
+
+/* ---------- Layout ---------- */
+.mv-auth {
+    padding: 0 0 72px;
+    background: var(--mv-surface);
+    font-family: var(--mv-font);
+}
+
+.mv-auth__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 28px;
+    align-items: start;
+    margin-top: -60px;
+    position: relative;
+}
+
+.mv-auth p,
+.mv-auth-hero p,
+.mv-auth-form p {
+    letter-spacing: normal;
+}
+
+/* ---------- Cards ---------- */
+.mv-auth-card {
+    background: var(--mv-white);
+    border: 1px solid var(--mv-line);
+    border-radius: var(--mv-radius-lg);
+    box-shadow: var(--mv-shadow);
+    padding: 32px;
+}
+
+.mv-auth-card--featured {
+    border-top: 4px solid var(--mv-primary);
+    box-shadow: var(--mv-shadow-lg);
+}
+
+.mv-auth-card__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.mv-auth-card__icon {
+    flex: 0 0 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--mv-radius);
+    background: var(--mv-primary-050);
+    color: var(--mv-primary-ink);
+    font-size: 20px;
+}
+
+.mv-auth-card__title {
+    margin: 0 0 4px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--mv-ink);
+}
+
+.mv-auth-card__sub {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--mv-muted);
+}
+
+/* ---------- Form ---------- */
+.mv-auth-form__split {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+
+.mv-auth-form .mv-field {
+    margin-bottom: 18px;
+}
+
+.mv-field__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.mv-auth-form .mv-field__label {
+    display: block;
+    margin: 0 0 7px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--mv-ink);
+}
+
+.mv-field__control {
+    position: relative;
+}
+
+.mv-field__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: var(--mv-muted);
+    pointer-events: none;
+    transition: color .15s ease;
+}
+
+.mv-auth-form .form-control.mv-field__input {
+    height: 48px;
+    padding: 0 14px 0 42px;
+    border: 1.5px solid var(--mv-line);
+    border-radius: var(--mv-radius-sm);
+    background: var(--mv-white);
+    font-family: var(--mv-font);
+    font-size: 15px;
+    color: var(--mv-ink);
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.mv-auth-form .form-control.mv-field__input::placeholder {
+    color: #9aa0af;
+}
+
+.mv-auth-form .form-control.mv-field__input:hover {
+    border-color: #cfd4de;
+}
+
+.mv-auth-form .form-control.mv-field__input:focus {
+    border-color: var(--mv-primary);
+    box-shadow: 0 0 0 4px rgba(255, 177, 24, .18);
+    outline: 0;
+}
+
+.mv-field__control:focus-within .mv-field__icon {
+    color: var(--mv-primary-600);
+}
+
+/* Hide the number spinner on the phone field. */
+.mv-auth-form input[type="number"]::-webkit-outer-spin-button,
+.mv-auth-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mv-auth-form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Validation (classes added by jquery.validate.unobtrusive / ASP.NET tag helpers). */
+.mv-auth-form .form-control.mv-field__input.input-validation-error {
+    border-color: #e04f3a;
+}
+
+.mv-auth-form .form-control.mv-field__input.input-validation-error:focus {
+    box-shadow: 0 0 0 4px rgba(224, 79, 58, .15);
+}
+
+.mv-field__error {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.mv-field__error:empty {
+    display: none;
+}
+
+.mv-auth-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mv-primary-ink);
+}
+
+.mv-auth-link:hover,
+.mv-auth-link:focus {
+    color: var(--mv-navy);
+    text-decoration: underline;
+}
+
+.mv-auth-form__submit {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+/* ---------- Perks strip ---------- */
+.mv-auth__perks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 32px;
+    margin: 36px 0 0;
+    padding: 0;
+}
+
+.mv-auth__perks li {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--mv-body);
+}
+
+.mv-auth__perks i {
+    color: var(--mv-primary-600);
+}
+
+/* ---------- Selects ---------- */
+.mv-auth-form select.form-control.mv-field__input {
+    padding-right: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.mv-field__control--select::after {
+    content: "\f107"; /* fa-angle-down */
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: var(--mv-muted);
+    pointer-events: none;
+}
+
+/* ---------- Contact page (/contactform) ---------- */
+.mv-contact__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    gap: 28px;
+    align-items: start;
+    margin-top: -60px;
+    position: relative;
+}
+
+.mv-contact__section {
+    min-width: 0;
+    margin: 0 0 10px;
+    padding: 0;
+    border: 0;
+}
+
+.mv-contact__section + .mv-contact__section {
+    padding-top: 22px;
+    border-top: 1px solid var(--mv-line);
+}
+
+.mv-auth-form .mv-contact__legend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    margin: 0 0 16px;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--mv-ink);
+}
+
+.mv-contact__legend span,
+.mv-contact__steps li > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mv-contact__aside {
+    display: grid;
+    gap: 20px;
+    position: sticky;
+    top: 24px;
+}
+
+.mv-contact__aside-title {
+    margin: 0 0 18px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--mv-ink);
+}
+
+.mv-contact__steps {
+    margin: 0;
+    padding: 0;
+}
+
+.mv-contact__steps li {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    line-height: 1.4;
+}
+
+.mv-contact__steps li + li {
+    margin-top: 18px;
+}
+
+.mv-contact__steps strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 15px;
+    color: var(--mv-ink);
+}
+
+.mv-contact__steps p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--mv-muted);
+}
+
+.mv-contact__call {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 24px;
+    border-radius: var(--mv-radius-lg);
+    background: var(--mv-navy);
+    color: var(--mv-white);
+}
+
+.mv-contact__call > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+    font-size: 20px;
+}
+
+.mv-contact__call p {
+    margin: 0 0 2px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .7);
+}
+
+.mv-contact__call a {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--mv-primary);
+}
+
+.mv-contact__call a:hover,
+.mv-contact__call a:focus {
+    color: var(--mv-white);
+    text-decoration: none;
+}
+
+/* ---------- Page heroes without an overlapping card ---------- */
+.mv-auth-hero.mv-page-hero--plain {
+    padding-bottom: 64px;
+}
+
+/* Van rental: bright photo, so a navy fade on the text side only. */
+.mv-auth-hero.mv-page-hero--van {
+    padding: 64px 0 72px;
+    background:
+        linear-gradient(90deg, rgba(26, 29, 42, .82) 0%, rgba(26, 29, 42, .55) 45%, rgba(26, 29, 42, .15) 100%),
+        url(../extra-images/services-grid-img2.jpg) center 60% / cover no-repeat;
+    background-color: var(--mv-navy);
+}
+
+.mv-van-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.mv-van-hero__ticks {
+    display: grid;
+    gap: 10px;
+    margin: 26px 0 0;
+    padding: 0;
+}
+
+.mv-van-hero__ticks li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--mv-white);
+}
+
+.mv-van-hero__ticks i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+    font-size: 12px;
+    text-shadow: none;
+}
+
+/* The hero adds a text shadow for the photo; cards sit on white. */
+.mv-auth-hero .mv-auth-card {
+    text-shadow: none;
+    color: var(--mv-body);
+}
+
+.mv-form-alert {
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    border: 1px solid #f3c2ba;
+    border-radius: var(--mv-radius-sm);
+    background: #fdf1ef;
+    color: #a3321f;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.mv-steps.mv-steps--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* ---------- About page ---------- */
+.mv-about__text p {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--mv-body);
+}
+
+.mv-about__text p:last-child {
+    margin-bottom: 0;
+}
+
+.mv-about__text strong {
+    color: var(--mv-ink);
+}
+
+.mv-about__text .mv-section__title {
+    margin-bottom: 20px;
+}
+
+.mv-about__media {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 360px;
+    padding: 32px 24px 0;
+    border-radius: var(--mv-radius-lg);
+    background:
+        radial-gradient(circle at 50% 100%, rgba(255, 177, 24, .35), transparent 65%),
+        var(--mv-primary-050);
+    overflow: hidden;
+}
+
+.mv-about__media img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 420px;
+}
+
+.mv-about__more {
+    max-width: 860px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+    .mv-auth-hero.mv-page-hero--van {
+        padding: 48px 0 56px;
+        background:
+            linear-gradient(180deg, rgba(26, 29, 42, .7) 0%, rgba(26, 29, 42, .45) 100%),
+            url(../extra-images/services-grid-img2.jpg) center / cover no-repeat;
+    }
+
+    .mv-van-hero__grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .mv-van-hero__card {
+        max-width: 560px;
+    }
+
+    .mv-steps.mv-steps--3 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .mv-about__media {
+        min-height: 0;
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .mv-contact__grid {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mv-contact__aside {
+        position: static;
+    }
+
+    .mv-auth__grid {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .mv-auth-hero.mv-page-hero--van,
+    .mv-auth-hero.mv-page-hero--plain {
+        padding: 36px 0 44px;
+    }
+
+    .mv-van-hero__ticks li {
+        font-size: 15px;
+    }
+
+    .mv-auth-hero {
+        padding: 36px 0 84px;
+    }
+
+    .mv-auth-hero .mv-container,
+    .mv-auth .mv-container {
+        padding: 0 16px;
+    }
+
+    .mv-auth-card {
+        padding: 24px 18px;
+        border-radius: var(--mv-radius);
+    }
+
+    .mv-auth-form__split {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

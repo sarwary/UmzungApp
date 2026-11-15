@@ -1,0 +1,1148 @@
+/* Homepage styles for Home/Index.cshtml: hero, booking card and the homepage sections.
+   Loaded last (via @section head) so it wins over style.css / responsive.css without !important. */
+
+/* =====================================================================
+   Homepage layout (design tokens come from site-modern.css)
+   ===================================================================== */
+
+.mv-hero,
+.mv-trustbar,
+.mv-section,
+.mv-cta {
+    font-family: var(--mv-font);
+}
+
+/* style.css gives every <p> 1.1px letter-spacing and every <li> a list marker; reset inside new sections. */
+.mv-hero__copy p,
+.mv-booking__head p,
+.mv-section p,
+.mv-cta p {
+    letter-spacing: normal;
+}
+
+.mv-hero__copy li,
+.mv-trustbar li,
+.mv-section li {
+    list-style: none;
+}
+
+.mv-steps > li::before {
+    display: none;
+}
+
+/* ---------- Shared type ---------- */
+.mv-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    border-radius: var(--mv-radius-pill);
+    background: var(--mv-primary-050);
+    color: var(--mv-primary-ink);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.mv-eyebrow--light {
+    background: rgba(255, 177, 24, .14);
+    color: var(--mv-primary);
+}
+
+.mv-section__head {
+    max-width: 680px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.mv-section__title {
+    margin: 0 0 14px;
+    color: var(--mv-ink);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+}
+
+.mv-section__lead {
+    margin: 0;
+    color: var(--mv-body);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ---------- Icons ---------- */
+.mv-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--mv-radius);
+    background: var(--mv-navy);
+    color: var(--mv-primary);
+    font-size: 22px;
+}
+
+.mv-icon--soft {
+    background: var(--mv-primary-050);
+    color: var(--mv-primary-ink);
+}
+
+.mv-icon--sm {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.mv-icon--onDark {
+    background: rgba(255, 177, 24, .16);
+}
+
+/* ---------- Hero ---------- */
+.mv-hero {
+    position: relative;
+    padding: 72px 0 88px;
+    background:
+        linear-gradient(90deg, rgba(26, 29, 42, .35) 0%, rgba(26, 29, 42, .1) 45%, rgba(26, 29, 42, 0) 70%),
+        url(../extra-images/slider.jpg) center / cover no-repeat;
+    color: rgba(255, 255, 255, .86);
+}
+
+.mv-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 56px;
+    align-items: start;
+}
+
+.mv-hero__copy {
+    padding-top: 24px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+}
+
+/* The booking card is tall; keep the value proposition in view beside it. */
+@media (min-width: 992px) {
+    .mv-hero__copy {
+        position: sticky;
+        top: 148px;
+    }
+}
+
+.mv-hero__title {
+    margin: 0 0 18px;
+    color: var(--mv-white);
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -.02em;
+    text-shadow: none;
+    text-transform: none;
+}
+
+.mv-hero__lead {
+    margin: 0 0 26px;
+    color: rgba(255, 255, 255, .82);
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.mv-checklist {
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+}
+
+.mv-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.mv-checklist i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    border-radius: 50%;
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+    font-size: 12px;
+}
+
+.mv-checklist--light li {
+    color: var(--mv-white);
+}
+
+.mv-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.mv-hero__contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 18px;
+    margin: 0;
+    color: rgba(255, 255, 255, .66);
+    font-size: 14px;
+}
+
+.mv-hero__contact a {
+    color: var(--mv-white);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.mv-hero__contact a:hover,
+.mv-hero__contact a:focus {
+    color: var(--mv-primary);
+}
+
+.mv-hero__contact i {
+    margin-right: 4px;
+    color: var(--mv-primary);
+}
+
+/* ---------- Booking card ---------- */
+.mv-booking {
+    position: relative;
+    padding: 28px;
+    border-radius: var(--mv-radius-lg);
+    background: var(--mv-white);
+    box-shadow: var(--mv-shadow-lg);
+    color: var(--mv-body);
+    scroll-margin-top: 140px;
+}
+
+.mv-booking__head {
+    margin-bottom: 18px;
+}
+
+.mv-booking__head h2 {
+    margin: 0 0 6px;
+    color: var(--mv-ink);
+    font-family: var(--mv-font);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    text-transform: none;
+}
+
+.mv-booking__head p {
+    margin: 0;
+    color: var(--mv-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Moving / Final cleaning service switch. */
+.mv-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 22px;
+    padding: 4px;
+    border-radius: var(--mv-radius-pill);
+    background: var(--mv-surface);
+}
+
+.mv-switch a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    border-radius: var(--mv-radius-pill);
+    color: var(--mv-muted);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: background-color .15s ease, color .15s ease, box-shadow .15s ease;
+}
+
+.mv-switch a:hover,
+.mv-switch a:focus {
+    color: var(--mv-navy);
+    text-decoration: none;
+}
+
+.mv-switch a.is-active {
+    background: var(--mv-navy);
+    color: var(--mv-white);
+    box-shadow: var(--mv-shadow-sm);
+}
+
+.mv-switch a.is-active i {
+    color: var(--mv-primary);
+}
+
+/* ---------- Form building blocks ---------- */
+.mv-bform {
+    margin: 0;
+}
+
+.mv-bform fieldset {
+    min-width: 0;
+}
+
+.mv-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid #f5c2c7;
+    border-radius: var(--mv-radius-sm);
+    background: #fdf1f2;
+    color: #a4262c;
+    font-size: 14px;
+}
+
+.mv-row {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.mv-row--addr {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+}
+
+.mv-row--details {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mv-field {
+    min-width: 0;
+}
+
+.mv-bform .mv-field__label {
+    display: block;
+    margin: 0 0 6px;
+    color: var(--mv-ink);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Text inputs with a leading icon. */
+.mv-input {
+    position: relative;
+}
+
+.mv-input > i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: var(--mv-muted);
+    font-size: 15px;
+    pointer-events: none;
+    transition: color .15s ease;
+}
+
+.mv-bform .mv-input input.form-control,
+.mv-bform .mv-select select {
+    display: block;
+    width: 100%;
+    height: 46px;
+    margin: 0;
+    border: 1.5px solid var(--mv-line);
+    border-radius: var(--mv-radius-sm);
+    background-color: var(--mv-white);
+    box-shadow: none;
+    color: var(--mv-ink);
+    font-family: var(--mv-font);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.mv-bform .mv-input input.form-control {
+    padding: 0 12px 0 40px;
+}
+
+.mv-bform .mv-input input.form-control::placeholder {
+    color: #9aa0ae;
+}
+
+.mv-bform .mv-input input.form-control:hover,
+.mv-bform .mv-select select:hover {
+    border-color: #cfd4de;
+}
+
+.mv-bform .mv-input input.form-control:focus,
+.mv-bform .mv-select select:focus {
+    border-color: var(--mv-primary);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 177, 24, .18);
+}
+
+.mv-input:focus-within > i {
+    color: var(--mv-primary-600);
+}
+
+/* Native select with a custom chevron. */
+.mv-select {
+    position: relative;
+}
+
+.mv-select::after {
+    content: "\f107"; /* fa-angle-down */
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    color: var(--mv-muted);
+    font-family: FontAwesome;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.mv-bform .mv-select select {
+    padding: 0 36px 0 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Yes / No segmented radio pair. Inputs stay in the DOM (and focusable) for validation and keyboard use. */
+.mv-yesno {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    height: 46px;
+    padding: 4px;
+    border: 1.5px solid var(--mv-line);
+    border-radius: var(--mv-radius-sm);
+    background: var(--mv-white);
+}
+
+.mv-yesno input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mv-bform .mv-yesno label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 6px;
+    color: var(--mv-body);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.mv-bform .mv-yesno label:hover {
+    background: var(--mv-surface);
+    color: var(--mv-ink);
+}
+
+.mv-bform .mv-yesno input:checked + label {
+    background: var(--mv-navy);
+    color: var(--mv-white);
+}
+
+.mv-yesno input:focus-visible + label {
+    box-shadow: 0 0 0 3px rgba(255, 177, 24, .45);
+}
+
+/* Property type pills (Bootstrap tabs: the <li> gets .active). */
+.mv-bform .mv-ptype {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.mv-bform .mv-ptype > li {
+    margin: 0;
+    line-height: 1;
+    list-style: none;
+}
+
+.mv-bform .mv-ptype > li > a,
+
+.mv-bform .mv-ptype > li > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1.5px solid var(--mv-line);
+    border-radius: var(--mv-radius-pill);
+    background: var(--mv-white);
+    color: var(--mv-body);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color .15s ease, background-color .15s ease, color .15s ease;
+}
+
+.mv-bform .mv-ptype > li > a:hover,
+.mv-bform .mv-ptype > li > a:focus {
+    border-color: var(--mv-navy);
+    color: var(--mv-navy);
+    text-decoration: none;
+}
+
+.mv-bform .mv-ptype > li.active > a,
+.mv-bform .mv-ptype > li.active > span {
+    border-color: var(--mv-primary);
+    background: var(--mv-primary-050);
+    color: var(--mv-navy);
+}
+
+.mv-bform .mv-ptype > li.active > a > i:first-child,
+.mv-bform .mv-ptype > li.active > span > i:first-child {
+    color: var(--mv-primary-ink);
+}
+
+.mv-ptype__ext {
+    font-size: 11px;
+    opacity: .6;
+}
+
+.mv-bform .mv-panes {
+    display: block;
+    padding: 0;
+}
+
+/* ---------- Route: A → B with a connecting line ---------- */
+.mv-route {
+    position: relative;
+}
+
+.mv-stop,
+.mv-when {
+    position: relative;
+    padding-left: 48px;
+}
+
+.mv-stop + .mv-stop {
+    margin-top: 6px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--mv-line);
+}
+
+/* Dashed rail from pin A down to pin B. */
+.mv-stop:first-child::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    bottom: -22px;
+    left: 15px;
+    border-left: 2px dashed rgba(255, 177, 24, .5);
+}
+
+.mv-stop__head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 34px;
+    margin-bottom: 14px;
+}
+
+.mv-stop__pin {
+    position: absolute;
+    top: 0;
+    left: -48px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--mv-navy);
+    box-shadow: 0 0 0 4px var(--mv-white);
+    color: var(--mv-primary);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.mv-stop--to .mv-stop__pin {
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+}
+
+.mv-stop__pin--icon {
+    background: var(--mv-primary-050);
+    color: var(--mv-primary-ink);
+}
+
+.mv-stop__kicker {
+    display: block;
+    color: var(--mv-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.mv-stop__title {
+    margin: 0;
+    font-family: var(--mv-font);
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--mv-ink);
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.mv-when {
+    margin-top: 6px;
+    padding-top: 18px;
+    border-top: 1px solid var(--mv-line);
+}
+
+.mv-when .mv-stop__pin {
+    top: 1px;
+}
+
+/* ---------- Submit ---------- */
+.mv-bform__submit {
+    margin-top: 8px;
+    padding-top: 20px;
+    border-top: 1px solid var(--mv-line);
+    text-align: center;
+}
+
+.mv-btn--block {
+    width: 100%;
+    min-height: 54px;
+    font-size: 16px;
+    letter-spacing: .04em;
+}
+
+.mv-bform__submit .mv-btn i {
+    transition: transform .15s ease;
+}
+
+.mv-bform__submit .mv-btn:hover i {
+    transform: translateX(3px);
+}
+
+.mv-bform__submit p {
+    /* style.css floats form paragraphs; keep this one centred under the button. */
+    position: static;
+    float: none;
+    width: auto;
+    margin: 12px 0 0;
+    color: var(--mv-muted);
+    font-size: 13px;
+    letter-spacing: normal;
+}
+
+.mv-bform__submit p i {
+    margin-right: 6px;
+    color: var(--mv-primary-600);
+}
+
+/* ---------- Booking card breakpoints ---------- */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .mv-row--details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991px) {
+    .mv-booking {
+        scroll-margin-top: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .mv-booking {
+        padding: 20px 16px;
+        border-radius: var(--mv-radius);
+    }
+
+    .mv-booking__head h2 {
+        font-size: 21px;
+    }
+
+    .mv-row--addr,
+    .mv-row--details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* Tighter rail on phones. */
+    .mv-stop,
+    .mv-when {
+        padding-left: 40px;
+    }
+
+    .mv-stop__pin {
+        left: -40px;
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+
+    .mv-stop:first-child::before {
+        top: 34px;
+        left: 13px;
+    }
+
+    .mv-bform .mv-ptype > li {
+        flex: 1 1 auto;
+    }
+
+    .mv-bform .mv-ptype > li > a,
+
+    .mv-bform .mv-ptype > li > span {
+        justify-content: center;
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .mv-switch a {
+        font-size: 12px;
+    }
+}
+
+/* ---------- Trust bar ---------- */
+.mv-trustbar {
+    border-bottom: 1px solid var(--mv-line);
+    background: var(--mv-white);
+}
+
+.mv-trustbar__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 auto;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    list-style: none;
+}
+
+.mv-trustbar__list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--mv-ink);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mv-trustbar__list i {
+    color: var(--mv-primary-600);
+    font-size: 18px;
+}
+
+/* ---------- Sections ---------- */
+.mv-section {
+    padding: 96px 0;
+    background: var(--mv-white);
+}
+
+.mv-section--tint {
+    background: var(--mv-surface);
+}
+
+.mv-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.mv-grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mv-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mv-card {
+    padding: 28px;
+    border: 1px solid var(--mv-line);
+    border-radius: var(--mv-radius);
+    background: var(--mv-white);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.mv-card:hover {
+    border-color: transparent;
+    box-shadow: var(--mv-shadow);
+    transform: translateY(-3px);
+}
+
+.mv-service {
+    display: flex;
+    flex-direction: column;
+}
+
+.mv-service h3,
+.mv-step h3,
+.mv-benefits h3 {
+    margin: 20px 0 10px;
+    color: var(--mv-ink);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.mv-service p,
+.mv-step p,
+.mv-benefits p {
+    margin: 0;
+    color: var(--mv-body);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.mv-service p {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.mv-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--mv-primary-ink);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.mv-link i {
+    transition: transform .15s ease;
+}
+
+.mv-link:hover,
+.mv-link:focus {
+    color: var(--mv-navy);
+    text-decoration: none;
+}
+
+.mv-link:hover i {
+    transform: translateX(3px);
+}
+
+/* ---------- How it works ---------- */
+.mv-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: none;
+}
+
+.mv-step {
+    position: relative;
+    padding: 28px;
+    border-radius: var(--mv-radius);
+    background: var(--mv-white);
+    box-shadow: var(--mv-shadow-sm);
+}
+
+.mv-step__num {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: var(--mv-line);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* Connector between steps on wide screens. */
+@media (min-width: 992px) {
+    .mv-step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 54px;
+        right: -24px;
+        width: 24px;
+        height: 2px;
+        background: repeating-linear-gradient(90deg, var(--mv-primary) 0 6px, transparent 6px 10px);
+    }
+}
+
+/* ---------- Why us (split) ---------- */
+.mv-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 64px;
+    align-items: center;
+}
+
+.mv-split__media img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3.4;
+    border-radius: var(--mv-radius-lg);
+    object-fit: cover;
+    box-shadow: var(--mv-shadow);
+}
+
+.mv-split__body .mv-section__title {
+    margin-bottom: 32px;
+}
+
+.mv-benefits {
+    display: grid;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mv-benefits li {
+    display: flex;
+    gap: 18px;
+}
+
+.mv-benefits h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 17px;
+}
+
+/* ---------- Van rental / partner promos ---------- */
+.mv-promo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    border: 1px solid var(--mv-line);
+    border-radius: var(--mv-radius-lg);
+    background: var(--mv-white);
+}
+
+.mv-promo h2 {
+    margin: 22px 0 10px;
+    color: var(--mv-ink);
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.mv-promo p {
+    flex: 1;
+    margin: 0 0 26px;
+    color: var(--mv-body);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.mv-promo--dark {
+    border-color: transparent;
+    background: var(--mv-navy);
+}
+
+.mv-promo--dark h2 {
+    color: var(--mv-white);
+}
+
+.mv-promo--dark p {
+    color: rgba(255, 255, 255, .76);
+}
+
+/* ---------- Final CTA ---------- */
+.mv-cta {
+    padding: 72px 0;
+    background: var(--mv-navy);
+}
+
+.mv-cta__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.mv-cta h2 {
+    margin: 0 0 8px;
+    color: var(--mv-white);
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.mv-cta p {
+    margin: 0;
+    color: rgba(255, 255, 255, .76);
+    font-size: 17px;
+}
+
+.mv-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1199px) {
+    .mv-hero__grid {
+        gap: 36px;
+    }
+
+    .mv-hero__title {
+        font-size: 42px;
+    }
+
+    .mv-grid--4,
+    .mv-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mv-step::after {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .mv-hero {
+        padding: 48px 0 64px;
+        background:
+            linear-gradient(180deg, rgba(26, 29, 42, .2) 0%, rgba(26, 29, 42, .35) 100%),
+            url(../extra-images/slider.jpg) center / cover no-repeat;
+    }
+
+    .mv-hero__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mv-hero__copy {
+        max-width: 640px;
+        padding-top: 0;
+    }
+
+    .mv-trustbar__list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mv-trustbar__list li {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .mv-section {
+        padding: 72px 0;
+    }
+
+    .mv-section__title {
+        font-size: 30px;
+    }
+
+    .mv-split {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mv-grid--2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .mv-hero__title {
+        font-size: 34px;
+    }
+
+    .mv-hero__lead {
+        font-size: 17px;
+    }
+
+    .mv-hero__actions .mv-btn {
+        flex: 1 1 100%;
+    }
+
+    .mv-grid--4,
+    .mv-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .mv-section__head {
+        margin-bottom: 36px;
+    }
+
+    .mv-section__lead {
+        font-size: 16px;
+    }
+
+    .mv-promo {
+        padding: 28px;
+    }
+
+    .mv-cta {
+        padding: 56px 0;
+    }
+
+    .mv-cta h2 {
+        font-size: 28px;
+    }
+
+    .mv-cta__actions,
+    .mv-cta__actions .mv-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .mv-trustbar__list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .mv-hero__title {
+        font-size: 30px;
+    }
+
+    .mv-section__title {
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mv-card,
+    .mv-btn,
+    .mv-link i {
+        transition: none;
+    }
+
+    .mv-card:hover,
+    .mv-btn:hover {
+        transform: none;
+    }
+}

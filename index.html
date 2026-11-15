@@ -1,0 +1,1104 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page - Quote</title>
+    
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/fonts/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/flaticon.css" rel="stylesheet">
+    <link href="/assets/css/slick-slider.css" rel="stylesheet">
+    <link href="/assets/css/fancybox.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
+    <link href="/assets/css/color.css" rel="stylesheet">
+    <link href="/assets/css/responsive.css" rel="stylesheet">
+    <link href="/assets/css/site-modern.css" rel="stylesheet">
+    <link href="/lib/toastr/build/toastr.min.css" rel="stylesheet">
+    <link href="/assets/css/toast-theme.css" rel="stylesheet">
+    <link href="/assets/css/form-pages.css" rel="stylesheet">
+    <link href="/assets/css/app-pages.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/datepickar/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/datepicker.css">
+
+    <!--ClockPicker css-->
+    <link rel="stylesheet" href="/assets/css/timepicker.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="/lib/angular/angular.min.js?v=1.0"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCsujhwZzzADcRYIVJ7WnRWWE0RsLrUSkE"></script>
+
+    
+    <link rel="stylesheet" href="/assets/css/home-responsive.css">
+
+</head>
+<body dir="ltr">
+    <div class="moverspackers-main-wrapper">
+        <header id="moverspackers-header" class="mv-header">
+            <div class="mv-topbar">
+                <div class="mv-container mv-topbar__inner">
+                    <div class="mv-topbar__lang">
+                        
+
+<style>
+    .flag-img {
+        max-height: 30px;
+        max-width: 30px;
+        border-radius: 50px;
+        height: 30px;
+        width: 30px;
+    }
+</style>
+<ul class="moverspackers-strip-info top-head-left-bar">
+    <li>
+        <i class="flaticon moverspackers-telephone"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2F">
+            <input type="hidden" name="culture" value="en-US" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/Uk.jpg" alt="En" title="En" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_uAtjotF7-Ek4Jrtb7azItAPfp0nJphpQ2CNlz8jJ526OHI1kXk8A8W0nPGM3U-ijpFrFyg2KxSmLN_HKMVoHut3HLjx7S356eFM1Jcjg7cFo8uWlohSj5ViyGP9brz-q4" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-lock"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2F">
+            <input type="hidden" name="culture" value="de-DE" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/german.jpg" alt="De" title="De" /></button>
+
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_uAtjotF7-Ek4Jrtb7azItAPfp0nJphpQ2CNlz8jJ526OHI1kXk8A8W0nPGM3U-ijpFrFyg2KxSmLN_HKMVoHut3HLjx7S356eFM1Jcjg7cFo8uWlohSj5ViyGP9brz-q4" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-telephone"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2F">
+            <input type="hidden" name="culture" value="fr-CH" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/franch.jpg" alt="Fr" title="Fr" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_uAtjotF7-Ek4Jrtb7azItAPfp0nJphpQ2CNlz8jJ526OHI1kXk8A8W0nPGM3U-ijpFrFyg2KxSmLN_HKMVoHut3HLjx7S356eFM1Jcjg7cFo8uWlohSj5ViyGP9brz-q4" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-lock"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2F">
+            <input type="hidden" name="culture" value="it-CH" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/ilean.jpg"  alt="It" title="It" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_uAtjotF7-Ek4Jrtb7azItAPfp0nJphpQ2CNlz8jJ526OHI1kXk8A8W0nPGM3U-ijpFrFyg2KxSmLN_HKMVoHut3HLjx7S356eFM1Jcjg7cFo8uWlohSj5ViyGP9brz-q4" /></form>
+    </li>
+</ul>
+
+
+
+
+
+                    </div>
+                    <ul class="mv-topbar__links">
+                        <li class="mv-topbar__consult"><a href="/contactform"><i class="fa fa-calendar-check-o"></i>REQUEST CONSULTATION</a></li>
+                        <li><a href="https://wa.me/41783309595" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i>LIVE CHAT</a></li>
+                        <li class="mv-topbar__phone"><a href="tel:+41613134567"><i class="fa fa-phone"></i><span>+41 61 31 34567</span></a></li>
+                        <li class="mv-topbar__social">
+                            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mv-nav">
+                <div class="mv-container mv-nav__inner">
+                    <a href="/" class="mv-logo" aria-label="Home">
+                        <span class="mv-logo__mark"><i class="fa fa-truck"></i></span>
+                        <span class="mv-logo__text">LOGO</span>
+                    </a>
+                    <button type="button" class="mv-nav__toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="mv-nav__menu collapse" id="navbar-collapse-1">
+                        <ul class="mv-menu">
+                            <li class="active">
+                                <a href="/" aria-current="page">Moving</a>
+                            </li>
+                            <li class="">
+                                <a href="/index2">Final Cleaning</a>
+                            </li>
+                            <li class="">
+                                <a href="/contactform">Request Free Home Visit</a>
+                            </li>
+                            <li class="">
+                                <a href="/car/home">Reserve Van For Moving</a>
+                            </li>
+                            <li class="">
+                                <a href="/about">Become Our Partners</a>
+                            </li>
+                        </ul>
+                        <div class="mv-nav__actions">
+                            <div class="mv-account">
+                                
+
+<a class="login_register_btn register-btn" href="/register">Connect</a>
+
+
+
+                            </div>
+                            <a href="/#exTab2" class="mv-btn mv-btn--primary mv-btn--sm">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        
+    <section class="mv-hero">
+        <div class="mv-container mv-hero__grid">
+            <div class="mv-hero__copy">
+                <span class="mv-eyebrow mv-eyebrow--light"><i class="fa fa-map-marker"></i> ready to move?</span>
+                <h1 class="mv-hero__title">Moving and final cleaning, planned in one place.</h1>
+                <p class="mv-hero__lead">we can help you to move and get professional final cleaning in SWITZERLAND.</p>
+                <ul class="mv-checklist mv-checklist--light">
+                    <li><i class="fa fa-check"></i> Quote based on your real inventory, room by room</li>
+                    <li><i class="fa fa-check"></i> Free home visit if you prefer an on-site estimate</li>
+                    <li><i class="fa fa-check"></i> Packing materials, assembly and disposal on request</li>
+                </ul>
+                <div class="mv-hero__actions">
+                    <a href="#exTab2" class="mv-btn mv-btn--primary" data-mv-focus="SourceAddress">Get A Quote <i class="fa fa-arrow-right"></i></a>
+                    <a href="/contactform" class="mv-btn mv-btn--ghost-light">Request Free Home Visit</a>
+                </div>
+                <p class="mv-hero__contact">
+                    Prefer to talk?
+                    <a href="tel:+41613134567"><i class="fa fa-phone"></i> +41 61 31 34567</a>
+                    <a href="https://wa.me/41783309595" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i> LIVE CHAT</a>
+                </p>
+            </div>
+
+            <div class="mv-hero__form">
+                <div id="exTab2" class="mv-booking">
+                    <div class="mv-booking__head">
+                        <div>
+                            <h2>Get your free quote</h2>
+                            <p>Start with both addresses and your property. You'll add your inventory in the next step.</p>
+                        </div>
+                    </div>
+
+                    <nav class="mv-switch" aria-label="Service">
+                        <a href="/" class="is-active" aria-current="page"><i class="fa fa-truck"></i> MOVING</a>
+                        <a href="/Index2"><i class="fa fa-shower"></i> FINAL CLEANING</a>
+                    </nav>
+
+                    <form name="MovingForm" class="mv-bform" onsubmit="return movingFormValidation()" method="post" action="/moving/request">
+
+                        <div class="mv-route">
+                            <!-- Location 1 -->
+                            <fieldset class="mv-stop">
+                                <div class="mv-stop__head">
+                                    <span class="mv-stop__pin">A</span>
+                                    <div>
+                                        <span class="mv-stop__kicker">Location 1</span>
+                                        <h3 class="mv-stop__title">Moving from</h3>
+                                    </div>
+                                </div>
+
+                                <div class="mv-row mv-row--addr">
+                                    <div class="mv-field">
+                                        <label class="mv-field__label" for="SourceAddress">Address</label>
+                                        <div class="mv-input">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <input type="text" id="SourceAddress" class="form-control" placeholder="Street and number" autocomplete="off" required name="MovingRequestVM.SourceStreet" value="">
+                                        </div>
+                                    </div>
+                                    <div class="mv-field">
+                                        <label class="mv-field__label" for="SourceZip">ZipCode/City</label>
+                                        <div class="mv-input">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <input type="text" id="SourceZip" class="form-control" placeholder="8001 Zürich" required name="MovingRequestVM.SourceZipCity" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="mv-field__label">Property type</span>
+                                <ul class="mv-ptype" role="tablist">
+                                    <li class="active" name="ApartmentRadioTag">
+                                        <a href="#apartment" id="SourceApartmentMoving" data-toggle="tab" role="tab">
+                                            <i class="fa fa-building-o" aria-hidden="true"></i> Apartment
+                                        </a>
+                                    </li>
+                                    <li class="" name="HouseRadioTag">
+                                        <a href="#house" id="SourceHouseMoving" data-toggle="tab" role="tab">
+                                            <i class="fa fa-home" aria-hidden="true"></i> House
+                                        </a>
+                                    </li>
+                                    <li class="" name="OfficeRadioTag">
+                                        <a href="/contactform" id="SourceOfficeMoving" target="_blank" rel="noopener">
+                                            <i class="fa fa-briefcase" aria-hidden="true"></i> Office
+                                            <i class="fa fa-external-link mv-ptype__ext" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content mv-panes">
+                                    <div class="tab-pane fade active in" id="apartment" role="tabpanel">
+                                        <div class="mv-row mv-row--details">
+                                            <div class="mv-field">
+                                                <label class="mv-field__label" for="s">Floor Level</label>
+                                                <div class="mv-select">
+                                                    <select id="s" name="MovingRequestVM.SourceFloorLevel">
+                                                        <option value="">Select</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                            <option>25</option>
+                                                            <option>26</option>
+                                                            <option>27</option>
+                                                            <option>28</option>
+                                                            <option>29</option>
+                                                            <option>30</option>
+                                                            <option>31</option>
+                                                            <option>32</option>
+                                                            <option>33</option>
+                                                            <option>34</option>
+                                                            <option>35</option>
+                                                            <option>36</option>
+                                                            <option>37</option>
+                                                            <option>38</option>
+                                                            <option>39</option>
+                                                            <option>40</option>
+                                                            <option>41</option>
+                                                            <option>42</option>
+                                                            <option>43</option>
+                                                            <option>44</option>
+                                                            <option>45</option>
+                                                            <option>46</option>
+                                                            <option>47</option>
+                                                            <option>48</option>
+                                                            <option>49</option>
+                                                            <option>50</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mv-field">
+                                                <span class="mv-field__label">Small Lift</span>
+                                                <div class="mv-yesno">
+                                                    <input type="radio" id="apartmentRadio" value="true" data-val="true" data-val-required="The SourceHasLift field is required." name="MovingRequestVM.SourceHasLift">
+                                                    <label for="apartmentRadio">Yes</label>
+                                                    <input type="radio" id="apartmentRadio1" value="false" name="MovingRequestVM.SourceHasLift">
+                                                    <label for="apartmentRadio1">No</label>
+                                                </div>
+                                            </div>
+                                            <div class="mv-field">
+                                                <span class="mv-field__label">Big Furniture Lift</span>
+                                                <div class="mv-yesno">
+                                                    <input type="radio" id="SourceBigFurnitureApartmentRadio" value="true" data-val="true" data-val-required="The SourceBigFurnitureHasLift field is required." name="MovingRequestVM.SourceBigFurnitureHasLift">
+                                                    <label for="SourceBigFurnitureApartmentRadio">Yes</label>
+                                                    <input type="radio" id="SourceBigFurnitureApartmentRadio1" value="false" name="MovingRequestVM.SourceBigFurnitureHasLift">
+                                                    <label for="SourceBigFurnitureApartmentRadio1">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="house" role="tabpanel">
+                                        <div class="mv-row mv-row--details">
+                                            <div class="mv-field">
+                                                <label class="mv-field__label" for="k">No. of storeys</label>
+                                                <div class="mv-select">
+                                                    <select id="k" name="MovingRequestVM.SourceNoOfStoreys">
+                                                        <option value="">Select</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mv-field">
+                                                <span class="mv-field__label">Lift</span>
+                                                <div class="mv-yesno">
+                                                    <input type="radio" id="houseRadio" value="true" name="MovingRequestVM.SourceHasLift">
+                                                    <label for="houseRadio">Yes</label>
+                                                    <input type="radio" id="houseRadio1" value="false" name="MovingRequestVM.SourceHasLift">
+                                                    <label for="houseRadio1">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="office">
+                                        <div class="mv-row">
+                                            <input type="text" class="form-control" id="name" placeholder="your Full Name" name="movingReqContactFormVM.FullName" value="">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email Adress" name="movingReqContactFormVM.Email" value="">
+                                            <input type="text" class="form-control" id="mobile" placeholder="Your Phone Number" name="movingReqContactFormVM.PhoneNumber" value="">
+                                            <select id="movingReqContactFormVM_Availiability" name="movingReqContactFormVM.Availiability">
+                                                <option>Time of Availiability</option>
+                                                <option>Morning (8:00 to 12:00)</option>
+                                                <option>Noon( 12:00 to 14:00)</option>
+                                                <option>Afternoon (14:00 to 17:00)</option>
+                                                <option>Afternoon (17:00 to 19:30)</option>
+                                            </select>
+                                            <input id="reservation_date" placeholder="Choose Date" data-select="datepicker" type="datetime" data-val="true" data-val-required="The MovingDate field is required." name="movingReqContactFormVM.MovingDate" value="">
+                                            <input type="time" class="form-control" placeholder="Choose Time" id="movingReqContactFormVM_MovingTime" name="movingReqContactFormVM.MovingTime" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mv-row mv-row--details">
+                                    <div class="mv-field">
+                                        <label class="mv-field__label" for="p">Number of Bedrooms</label>
+                                        <div class="mv-select">
+                                            <select id="p" name="MovingRequestVM.NumberOfBedrooms">
+                                                <option value="">Select</option>
+                                                <option>1</option>
+                                                <option>1.5</option>
+                                                <option>2</option>
+                                                <option>2.5</option>
+                                                <option>3</option>
+                                                <option>3.5</option>
+                                                <option>4</option>
+                                                <option>4.5</option>
+                                                <option>5</option>
+                                                <option>5.5</option>
+                                                <option>6</option>
+                                                <option>6.5</option>
+                                                <option>7</option>
+                                                <option>7.5</option>
+                                                <option>8</option>
+                                                <option>8.5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Location 2 -->
+                            <fieldset class="mv-stop mv-stop--to">
+                                <div class="mv-stop__head">
+                                    <span class="mv-stop__pin">B</span>
+                                    <div>
+                                        <span class="mv-stop__kicker">Location 2</span>
+                                        <h3 class="mv-stop__title">Moving to</h3>
+                                    </div>
+                                </div>
+
+                                <div class="mv-row mv-row--addr">
+                                    <div class="mv-field">
+                                        <label class="mv-field__label" for="DestinationAddress">Address</label>
+                                        <div class="mv-input">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <input type="text" id="DestinationAddress" class="form-control" placeholder="Street and number" autocomplete="off" required name="MovingRequestVM.DestinationStreet" value="">
+                                        </div>
+                                    </div>
+                                    <div class="mv-field">
+                                        <label class="mv-field__label" for="DestinationZip">ZipCode/City</label>
+                                        <div class="mv-input">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <input type="text" id="DestinationZip" class="form-control" placeholder="3011 Bern" required name="MovingRequestVM.DestinationZipCity" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="mv-field__label">Property type</span>
+                                <ul class="mv-ptype" role="tablist">
+                                    <li class="active" name="DestinationApartmentRadioTag">
+                                        <a href="#apartment_location2" id="DestinationApartment" data-toggle="tab" role="tab">
+                                            <i class="fa fa-building-o" aria-hidden="true"></i> Apartment
+                                        </a>
+                                    </li>
+                                    <li class="" name="DestinationHouseRadioTag">
+                                        <a href="#house_location2" id="DestinationHouse" data-toggle="tab" role="tab">
+                                            <i class="fa fa-home" aria-hidden="true"></i> House
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content mv-panes">
+                                    <div class="tab-pane fade active in" id="apartment_location2" role="tabpanel">
+                                        <div class="mv-row mv-row--details">
+                                            <div class="mv-field">
+                                                <label class="mv-field__label" for="q">Floor Level</label>
+                                                <div class="mv-select">
+                                                    <select id="q" name="MovingRequestVM.DestinationFloorLevel">
+                                                        <option value="">Select</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                            <option>25</option>
+                                                            <option>26</option>
+                                                            <option>27</option>
+                                                            <option>28</option>
+                                                            <option>29</option>
+                                                            <option>30</option>
+                                                            <option>31</option>
+                                                            <option>32</option>
+                                                            <option>33</option>
+                                                            <option>34</option>
+                                                            <option>35</option>
+                                                            <option>36</option>
+                                                            <option>37</option>
+                                                            <option>38</option>
+                                                            <option>39</option>
+                                                            <option>40</option>
+                                                            <option>41</option>
+                                                            <option>42</option>
+                                                            <option>43</option>
+                                                            <option>44</option>
+                                                            <option>45</option>
+                                                            <option>46</option>
+                                                            <option>47</option>
+                                                            <option>48</option>
+                                                            <option>49</option>
+                                                            <option>50</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mv-field">
+                                                <span class="mv-field__label">Small Lift</span>
+                                                <div class="mv-yesno">
+                                                    <input type="radio" id="apartmentRadio2" value="true" data-val="true" data-val-required="The DestinationHasLift field is required." name="MovingRequestVM.DestinationHasLift">
+                                                    <label for="apartmentRadio2">Yes</label>
+                                                    <input type="radio" id="apartmentRadio3" value="false" name="MovingRequestVM.DestinationHasLift">
+                                                    <label for="apartmentRadio3">No</label>
+                                                </div>
+                                            </div>
+                                            <div class="mv-field">
+                                                <span class="mv-field__label">Big Furniture Lift</span>
+                                                <div class="mv-yesno">
+                                                    <input type="radio" id="DestinationBigFurnitureApartmentRadio" value="true" data-val="true" data-val-required="The DestinationBigFurnitureHasLift field is required." name="MovingRequestVM.DestinationBigFurnitureHasLift">
+                                                    <label for="DestinationBigFurnitureApartmentRadio">Yes</label>
+                                                    <input type="radio" id="DestinationBigFurnitureApartmentRadio1" value="false" name="MovingRequestVM.DestinationBigFurnitureHasLift">
+                                                    <label for="DestinationBigFurnitureApartmentRadio1">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="house_location2" role="tabpanel">
+                                        <div class="mv-row mv-row--details">
+                                            <div class="mv-field">
+                                                <label class="mv-field__label" for="m">No. of storeys</label>
+                                                <div class="mv-select">
+                                                    <select id="m" name="MovingRequestVM.DestinationNoOfStoreys">
+                                                        <option value="">Select</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mv-field">
+                                                <span class="mv-field__label">Lift</span>
+                                                <div class="mv-yesno">
+                                                    <input type="radio" id="DestinationHouseRadio2" value="true" name="MovingRequestVM.DestinationHasLift">
+                                                    <label for="DestinationHouseRadio2">Yes</label>
+                                                    <input type="radio" id="DestinationHouseRadio4" value="false" name="MovingRequestVM.DestinationHasLift">
+                                                    <label for="DestinationHouseRadio4">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <!-- Date -->
+                        <fieldset class="mv-when">
+                            <div class="mv-stop__head">
+                                <span class="mv-stop__pin mv-stop__pin--icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                <h3 class="mv-stop__title">Moving date</h3>
+                            </div>
+                            <div class="mv-row mv-row--addr">
+                                <div class="mv-field">
+                                    <label class="mv-field__label" for="MovingRequestVM_ServiceDateForMoving">Proposed date of moving</label>
+                                    <div class="mv-input">
+                                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                        <input type="text" data-select="datepicker" class="form-control" placeholder="MM/DD/YYYY" autocomplete="off" required id="MovingRequestVM_ServiceDateForMoving" name="MovingRequestVM.ServiceDateForMoving" value="">
+                                    </div>
+                                </div>
+                                <div class="mv-field">
+                                    <label class="mv-field__label" for="MovingRequestVM_FlexibleDatePeriod">Flexibility</label>
+                                    <div class="mv-select">
+                                        <select id="MovingRequestVM_FlexibleDatePeriod" name="MovingRequestVM.FlexibleDatePeriod">
+                                            <option>NOT FLEXIBLE</option>
+                                            <option>+ - 1 DAY</option>
+                                            <option>+ - 2 DAYS</option>
+                                            <option>+ - 3 DAYS</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="mv-bform__submit">
+                            <button type="submit" class="mv-btn mv-btn--primary mv-btn--block">CONTINUE <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                            <p><i class="fa fa-cubes" aria-hidden="true"></i> Next: choose your inventory room by room</p>
+                        </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_uAtjotF7-Ek4Jrtb7azItAPfp0nJphpQ2CNlz8jJ526OHI1kXk8A8W0nPGM3U-ijpFrFyg2KxSmLN_HKMVoHut3HLjx7S356eFM1Jcjg7cFo8uWlohSj5ViyGP9brz-q4" /></form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mv-trustbar">
+    <ul class="mv-container mv-trustbar__list">
+        <li><i class="fa fa-map-marker"></i> Serving customers across Switzerland</li>
+        <li><i class="fa fa-language"></i> English · Deutsch · Français · Italiano</li>
+        <li><i class="fa fa-home"></i> Request Free Home Visit</li>
+        <li><i class="fa fa-whatsapp"></i> LIVE CHAT · WhatsApp</li>
+    </ul>
+</div>
+
+
+        <div>
+            
+
+<section class="mv-section" id="services">
+    <div class="mv-container">
+        <header class="mv-section__head">
+            <span class="mv-eyebrow">Our Services</span>
+            <h2 class="mv-section__title">Everything your move needs, from one team</h2>
+            <p class="mv-section__lead">Book a full move, add a final cleaning for your old home, or rent a van and do it yourself.</p>
+        </header>
+
+        <div class="mv-grid mv-grid--4">
+            <article class="mv-card mv-service">
+                <span class="mv-icon"><i class="fa fa-truck"></i></span>
+                <h3>Home Moving</h3>
+                <p>Apartments and houses. Tell us about floors, lifts and your inventory and we prepare a quote that fits.</p>
+                <a href="/#exTab2" class="mv-link" data-mv-focus="SourceAddress">Get Quotation for Moving <i class="fa fa-arrow-right"></i></a>
+            </article>
+            <article class="mv-card mv-service">
+                <span class="mv-icon"><i class="fa fa-shower"></i></span>
+                <h3>Cleaning Service</h3>
+                <p>Professional final cleaning when you leave your old home, so the handover goes smoothly.</p>
+                <a href="/Index2#exTab2" class="mv-link" data-mv-focus="CleaningAddress">Get Quotation for Cleaning <i class="fa fa-arrow-right"></i></a>
+            </article>
+            <article class="mv-card mv-service">
+                <span class="mv-icon"><i class="fa fa-car"></i></span>
+                <h3>Van Rental</h3>
+                <p>You can rent a van to make your move easier.</p>
+                <a href="/car/home" class="mv-link">Reserve Van <i class="fa fa-arrow-right"></i></a>
+            </article>
+            <article class="mv-card mv-service">
+                <span class="mv-icon"><i class="fa fa-building-o"></i></span>
+                <h3>Office/Commercial Property</h3>
+                <p>Office and commercial moves are planned individually. Send us your details and we will get in touch.</p>
+                <a href="/contactform" class="mv-link">Request Free Home Visit <i class="fa fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<section class="mv-section mv-section--tint" id="how-it-works">
+    <div class="mv-container">
+        <header class="mv-section__head">
+            <span class="mv-eyebrow">How it Works</span>
+            <h2 class="mv-section__title">From first address to moving day in four steps</h2>
+        </header>
+
+        <ol class="mv-steps">
+            <li class="mv-step">
+                <span class="mv-step__num">1</span>
+                <span class="mv-icon mv-icon--soft"><i class="fa fa-map-marker"></i></span>
+                <h3>Enter your addresses</h3>
+                <p>Add where you're moving from and to, the property type, floor level and lift access.</p>
+            </li>
+            <li class="mv-step">
+                <span class="mv-step__num">2</span>
+                <span class="mv-icon mv-icon--soft"><i class="fa fa-cubes"></i></span>
+                <h3>Build your inventory</h3>
+                <p>Pick your furniture and items room by room. We estimate total volume and weight for you.</p>
+            </li>
+            <li class="mv-step">
+                <span class="mv-step__num">3</span>
+                <span class="mv-icon mv-icon--soft"><i class="fa fa-sliders"></i></span>
+                <h3>Choose extras</h3>
+                <p>Add packing materials, dismantling and assembly or disposal, and tell us when we can call you.</p>
+            </li>
+            <li class="mv-step">
+                <span class="mv-step__num">4</span>
+                <span class="mv-icon mv-icon--soft"><i class="fa fa-check-circle-o"></i></span>
+                <h3>Submit Your Details/Get a Quote</h3>
+                <p>We Connect With You, confirm the offer and choose how to pay. Enjoy Your Moving!</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="mv-section" id="why-us">
+    <div class="mv-container mv-split">
+        <div class="mv-split__media">
+            <img src="/assets/extra-images/services-grid-img2.jpg" alt="Movers loading a van in front of a house" loading="lazy">
+        </div>
+        <div class="mv-split__body">
+            <span class="mv-eyebrow">Why move with us</span>
+            <h2 class="mv-section__title">A clear plan and a fair price, before anything is lifted</h2>
+            <ul class="mv-benefits">
+                <li>
+                    <span class="mv-icon mv-icon--sm"><i class="fa fa-list-alt"></i></span>
+                    <div>
+                        <h3>Priced on what you actually move</h3>
+                        <p>Your quote comes from your own inventory list, not a rough guess by room count.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="mv-icon mv-icon--sm"><i class="fa fa-refresh"></i></span>
+                    <div>
+                        <h3>Moving and cleaning together</h3>
+                        <p>Arrange the move and the final cleaning of your old home with one team and one contact.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="mv-icon mv-icon--sm"><i class="fa fa-calendar"></i></span>
+                    <div>
+                        <h3>Flexible dates</h3>
+                        <p>Tell us if your date can move by a few days and we can plan around it.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="mv-icon mv-icon--sm"><i class="fa fa-user-circle-o"></i></span>
+                    <div>
+                        <h3>Everything in your account</h3>
+                        <p>See your requests, inventory and offered amount any time after you sign in.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="mv-section mv-section--tint">
+    <div class="mv-container mv-grid mv-grid--2">
+        <article class="mv-promo mv-promo--dark">
+            <span class="mv-icon mv-icon--onDark"><i class="fa fa-car"></i></span>
+            <h2>Moving yourself?</h2>
+            <p>You can rent a van to make your move easier.</p>
+            <a href="/car/home" class="mv-btn mv-btn--primary">Reserve Van For Moving</a>
+        </article>
+        <article class="mv-promo">
+            <span class="mv-icon"><i class="fa fa-handshake-o"></i></span>
+            <h2>Become Our Partners</h2>
+            <p>Run a moving or cleaning business? Find out more about working with us.</p>
+            <a href="/about" class="mv-btn mv-btn--dark">Learn more</a>
+        </article>
+    </div>
+</section>
+
+
+
+<section class="mv-cta">
+    <div class="mv-container mv-cta__inner">
+        <div>
+            <h2>Let us get moving!</h2>
+            <p>Get your free quote online, or book a free home visit and we'll estimate on site.</p>
+        </div>
+        <div class="mv-cta__actions">
+            <a href="#exTab2" class="mv-btn mv-btn--primary" data-mv-focus>Get A Quote <i class="fa fa-arrow-right"></i></a>
+            <a href="/contactform" class="mv-btn mv-btn--ghost-light">Request Free Home Visit</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+        </div>
+
+        <footer id="moverspackers-footer" class="mv-footer">
+            <div class="mv-container">
+                <div class="mv-footer__grid">
+                    <div>
+                        <a href="/" class="mv-logo" aria-label="Home">
+                            <span class="mv-logo__mark"><i class="fa fa-truck"></i></span>
+                            <span class="mv-logo__text">LOGO</span>
+                        </a>
+                        <p class="mv-footer__about">we can help you to move and get professional final cleaning in SWITZERLAND.</p>
+                        <ul class="mv-social">
+                            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Service</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="/">Moving</a></li>
+                            <li><a href="/index2">Cleaning Service</a></li>
+                            <li><a href="/car/home">Van Rental</a></li>
+                            <li><a href="/contactform">Request Free Home Visit</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Quick Links</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/#how-it-works">How it Works</a></li>
+                            <li><a href="/about">Become Our Partners</a></li>
+                            <li><a href="/privacy">Privacy Policy</a></li>
+                            <li><a href="/TermCondition">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Contact Us</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="tel:+41613134567"><i class="fa fa-phone"></i>+41 61 31 34567</a></li>
+                            <li><a href="https://wa.me/41783309595" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i>LIVE CHAT</a></li>
+                            <li><i class="fa fa-map-marker"></i>Street 12,12 Swees</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mv-footer__bottom">
+                    <p><i class="fa fa-copyright"></i> 2026, Powered by <a href="https://fulminous.com/">Fulminous</a></p>
+                    <ul class="mv-footer__legal">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/TermCondition">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div id="shopModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+        <div id="productOverview" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content modal-padding">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <script>
+            window.simplGlobalSetting = {};
+            window.simplGlobalSetting.lang = 'en-US';
+    </script>
+
+
+
+    <a id="scroll-to-top" href="#" class="btn btn-primary btn-lg" role="button" data-toggle="tooltip" data-placement="left">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    <script type="text/javascript" src="/assets/script/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/script/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="/assets/script/slick.slider.js"></script>
+    <script type="text/javascript" src="/assets/script/fancybox.pack.js"></script>
+    <script type="text/javascript" src="/assets/script/isotope.min.js"></script>
+    <script type="text/javascript" src="/assets/script/numscroller.js"></script>
+    <script type="text/javascript" src="/assets/script/progressbar.js"></script>
+    <script type="text/javascript" src="/assets/script/functions.js"></script>
+    <script src="/assets/js/moment.min.js"></script>
+    <script src="/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datepicker JS -->
+    <script src="/assets/script/datepicker.js"></script>
+    <!--TimePicker JS-->
+    <script src="/assets/script/timepicker.js"></script>
+    <script src="/assets/script/main.js"></script>
+    <script src="/assets/js/script.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="/lib/multi-dropdown-menu/js/bootstrap-4-navbar.js?v=1.0"></script>
+    <script src="/lib/matchheight/jquery.matchHeight.js?v=1.0"></script>
+    <script src="/lib/toastr/build/toastr.min.js?v=1.0"></script>
+    <script>
+        // Site-wide toast defaults (styled by assets/css/toast-theme.css). Pages may still override positionClass.
+        toastr.options = $.extend(toastr.options, {
+            closeButton: true,
+            progressBar: true,
+            preventDuplicates: true,
+            newestOnTop: true,
+            positionClass: 'toast-top-center',
+            timeOut: 5000,
+            extendedTimeOut: 2000,
+            showDuration: 200,
+            hideDuration: 200
+        });
+    </script>
+    <script src="/lib/bootstrap-star-rating/js/star-rating.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.Core/main.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.ShoppingCart/add-to-cart.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.ProductComparison/product-comparison.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.WishList/wishlist.js?v=1.0"></script>
+    
+    <script src="/assets/js/mv-home.js?v=IM0KL2HticT1dKL-ofyPIuZTkK-yUJdvwrQXAK4Wl6E"></script>
+    
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js">
+    </script>
+<script>(window.jQuery && window.jQuery.validator||document.write("\u003Cscript src=\u0022/lib/jquery-validation/dist/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js">
+    </script>
+<script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\u003Cscript src=\u0022/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', function () {
+            //var options = {
+            //    types: ['(cities)'],
+            //    componentRestrictions: { country: "in" }
+            //};
+            var inputForSourceMoving = document.getElementById('SourceAddress');
+            var placesSource = new google.maps.places.Autocomplete(inputForSourceMoving);
+            var inputForDestinationMoving = document.getElementById('DestinationAddress');
+            var placesDestination = new google.maps.places.Autocomplete(inputForDestinationMoving);
+            var inputAddressForCleaning = document.getElementById('CleaningAddress');
+            var placesCleanAddress = new google.maps.places.Autocomplete(inputAddressForCleaning);
+        });
+    </script>
+    <script>
+        function movingFormValidation() {
+            var sourceAddress = document.forms["MovingForm"]["MovingRequestVM.SourceStreet"];
+            var sourceZip = document.forms["MovingForm"]["MovingRequestVM.SourceZipCity"];
+            var destinationAddress = document.forms["MovingForm"]["MovingRequestVM.DestinationStreet"];
+            var destinationZip = document.forms["MovingForm"]["MovingRequestVM.DestinationZipCity"];
+            var movingServiceDate = document.forms["MovingForm"]["MovingRequestVM.ServiceDateForMoving"];
+            var sourceFloor = document.forms["MovingForm"]["MovingRequestVM.SourceFloorLevel"];
+            var sourceNumberOfBedrooms = document.forms["MovingForm"]["MovingRequestVM.NumberOfBedrooms"];
+            var sourceHouseFloor = document.forms["MovingForm"]["MovingRequestVM.SourceNoOfStoreys"];
+            var destinationFloor = document.forms["MovingForm"]["MovingRequestVM.DestinationFloorLevel"];
+            var destinationHouseFloor = document.forms["MovingForm"]["MovingRequestVM.DestinationNoOfStoreys"];
+
+            if (sourceAddress.value == "") {
+                //window.alert("Please enter your source address.");
+                //Adjust toaster position..... which displays toaster in the center
+                toastr.options.positionClass = 'toast-top-center';
+                toastr.options.closeButton = "true";
+                toastr.error('Please enter the address you are moving from.');
+                sourceAddress.focus();
+                return false;
+            }
+
+            if (sourceZip.value == "") {
+                toastr.options.positionClass = 'toast-top-center';
+                toastr.options.closeButton = "true";
+                toastr.error('Please enter the ZIP code or city you are moving from.');
+                sourceZip.focus();
+                return false;
+            }
+
+            if (destinationAddress.value == "") {
+                toastr.options.positionClass = 'toast-top-center';
+                toastr.options.closeButton = "true";
+                toastr.error('Please enter the address you are moving to.');
+                destinationAddress.focus();
+                return false;
+            }
+
+            if (destinationZip.value == "") {
+                toastr.options.positionClass = 'toast-top-center';
+                toastr.options.closeButton = "true";
+                toastr.error('Please enter the ZIP code or city you are moving to.');
+                destinationZip.focus();
+                return false;
+            }
+
+            if (movingServiceDate.value == "") {
+                toastr.options.positionClass = 'toast-top-center';
+                toastr.options.closeButton = "true";
+                toastr.error('Please choose your moving date.');
+                movingServiceDate.focus();
+                return false;
+            }
+
+            var sourceApartmentLi = document.getElementsByName("ApartmentRadioTag");
+            var sourceApartmentClass = sourceApartmentLi[0].className;
+
+            var sourceHouseLi = document.getElementsByName("HouseRadioTag");
+            var sourceHouseClass = sourceHouseLi[0].className;
+
+            var sourceOfficeLi = document.getElementsByName("OfficeRadioTag");
+            var sourceOfficeClass = sourceOfficeLi[0].className;
+
+            if (sourceApartmentClass == "active" && sourceHouseClass == "") {
+                console.log("you are in apartment");
+                if (sourceFloor.selectedIndex < 1) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please select the floor of your current home.');
+                    //sourceFloor.focus();
+                    return false;
+                }
+
+                if (document.getElementById('apartmentRadio').checked == false && document.getElementById('apartmentRadio1').checked == false) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please tell us if your current building has a small lift.');
+                    return false;
+                }
+
+                if (document.getElementById('SourceBigFurnitureApartmentRadio').checked == false && document.getElementById('SourceBigFurnitureApartmentRadio1').checked == false) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please tell us if your current building has a lift for big furniture.');
+                    return false;
+                }
+
+                if (sourceNumberOfBedrooms.selectedIndex < 1) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please select the number of bedrooms in your current home.');
+                    //sourceNumberOfBedrooms.focus();
+                    return false;
+                }
+            }
+
+            if (sourceHouseClass == "active" && sourceApartmentClass == "") {
+                console.log("you are in house");
+
+                if (sourceHouseFloor.selectedIndex < 1) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please select how many storeys your current house has.');
+                    //sourceHouseFloor.focus();
+                    return false;
+                }
+
+                if (document.getElementById('houseRadio').checked == false && document.getElementById('houseRadio1').checked == false) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please tell us if your current house has a lift.');
+                    return false;
+                }
+
+                if (sourceNumberOfBedrooms.selectedIndex < 1) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please select the number of bedrooms in your current home.');
+                    //sourceNumberOfBedrooms.focus();
+                    return false;
+                }
+            }
+
+            var destinationApartmentLi = document.getElementsByName("DestinationApartmentRadioTag");
+            var destinationApartmentClass = destinationApartmentLi[0].className;
+
+            var destinationHouseLi = document.getElementsByName("DestinationHouseRadioTag");
+            var destinationHouseClass = destinationHouseLi[0].className;
+
+            if (destinationApartmentClass == "active" && destinationHouseClass == "") {
+                console.log("you are in destination apartment");
+
+                if (destinationFloor.selectedIndex < 1) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please select the floor of your new home.');
+                    //destinationFloor.focus();
+                    return false;
+                }
+
+                if (document.getElementById('apartmentRadio2').checked == false && document.getElementById('apartmentRadio3').checked == false) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please tell us if your new building has a small lift.');
+                    return false;
+                }
+
+                if (document.getElementById('DestinationBigFurnitureApartmentRadio').checked == false && document.getElementById('DestinationBigFurnitureApartmentRadio1').checked == false) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please tell us if your new building has a lift for big furniture.');
+                    return false;
+                }
+            }
+
+            if (destinationHouseClass == "active" && destinationApartmentClass == "") {
+                console.log("you are in destination house");
+
+                if (destinationHouseFloor.selectedIndex < 1) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please select how many storeys your new house has.');
+                    //destinationHouseFloor.focus();
+                    return false;
+                }
+
+                if (document.getElementById('DestinationHouseRadio2').checked == false && document.getElementById('DestinationHouseRadio4').checked == false) {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.closeButton = "true";
+                    toastr.error('Please tell us if your new house has a lift.');
+                    return false;
+                }
+
+            }
+
+            toastr.options.positionClass = 'toast-top-right';
+            return true;
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-78132767-2', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,667 @@
+/* Site-wide design system: tokens, buttons, header and footer used by Views/Shared/_Layout.cshtml.
+   Loaded after the legacy theme CSS so it wins without !important. Page-specific styles live in
+   their own files (e.g. home-responsive.css). */
+
+:root {
+    --mv-primary: #ffb118;     /* theme yellow (color.css) */
+    --mv-primary-600: #c98500; /* hover fill / icons on white */
+    --mv-primary-ink: #8a5a00; /* yellow-family text on white (≈6:1) */
+    --mv-primary-050: #fff5dc;
+    --mv-navy: #272b3d;
+    --mv-navy-900: #1a1d2a;
+    --mv-accent: #ffb628;
+    --mv-ink: #1f2330;
+    --mv-body: #4a5061;
+    --mv-muted: #6b7183;
+    --mv-line: #e5e8ef;
+    --mv-surface: #f5f7fb;
+    --mv-white: #ffffff;
+
+    --mv-radius-sm: 8px;
+    --mv-radius: 14px;
+    --mv-radius-lg: 22px;
+    --mv-radius-pill: 999px;
+
+    --mv-shadow-sm: 0 1px 2px rgba(26, 29, 42, .06), 0 1px 3px rgba(26, 29, 42, .08);
+    --mv-shadow: 0 6px 20px rgba(26, 29, 42, .08);
+    --mv-shadow-lg: 0 18px 48px rgba(26, 29, 42, .16);
+
+    --mv-font: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    --mv-container: 1200px;
+    --mv-header-h: 76px;
+}
+
+/* style.css gives every <p> 1.1px letter-spacing and every <li> a list marker; reset inside new components. */
+.mv-header p,
+.mv-footer p {
+    letter-spacing: normal;
+}
+
+.mv-header li,
+.mv-footer li {
+    line-height: inherit;
+    list-style: none;
+}
+
+.mv-container {
+    width: 100%;
+    max-width: var(--mv-container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- Buttons ---------- */
+.mv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 0 22px;
+    border: 1.5px solid transparent;
+    border-radius: var(--mv-radius-pill);
+    font-family: var(--mv-font);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .01em;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+
+.mv-btn:hover,
+.mv-btn:focus {
+    text-decoration: none;
+}
+
+.mv-btn:focus-visible {
+    outline: 3px solid rgba(255, 177, 24, .45);
+    outline-offset: 2px;
+}
+
+/* Navy text on yellow keeps the brand colour while staying readable (≈7:1). */
+.mv-btn--primary {
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+}
+
+.mv-btn--primary:hover,
+.mv-btn--primary:focus {
+    background: #f2a100;
+    color: var(--mv-navy-900);
+    box-shadow: 0 6px 18px rgba(255, 177, 24, .35);
+    transform: translateY(-1px);
+}
+
+.mv-btn--dark {
+    background: var(--mv-navy);
+    color: var(--mv-white);
+}
+
+.mv-btn--dark:hover,
+.mv-btn--dark:focus {
+    background: var(--mv-navy-900);
+    color: var(--mv-white);
+    transform: translateY(-1px);
+}
+
+.mv-btn--ghost {
+    background: transparent;
+    border-color: var(--mv-line);
+    color: var(--mv-ink);
+}
+
+.mv-btn--ghost:hover,
+.mv-btn--ghost:focus {
+    border-color: var(--mv-navy);
+    color: var(--mv-navy);
+}
+
+.mv-btn--ghost-light {
+    background: rgba(255, 255, 255, .06);
+    border-color: rgba(255, 255, 255, .45);
+    color: var(--mv-white);
+}
+
+.mv-btn--ghost-light:hover,
+.mv-btn--ghost-light:focus {
+    background: rgba(255, 255, 255, .14);
+    border-color: var(--mv-white);
+    color: var(--mv-white);
+}
+
+.mv-btn--sm {
+    min-height: 38px;
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+/* ---------- Header: top bar ---------- */
+.mv-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--mv-white);
+    font-family: var(--mv-font);
+    box-shadow: 0 1px 0 var(--mv-line);
+}
+
+.mv-topbar {
+    background: var(--mv-navy);
+    color: rgba(255, 255, 255, .82);
+    font-size: 13px;
+}
+
+.mv-topbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 40px;
+}
+
+.mv-topbar a {
+    color: rgba(255, 255, 255, .82);
+    text-decoration: none;
+    transition: color .15s ease;
+}
+
+.mv-topbar a:hover,
+.mv-topbar a:focus {
+    color: var(--mv-primary);
+}
+
+.mv-topbar__links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mv-topbar__links i {
+    margin-right: 6px;
+    color: var(--mv-primary);
+}
+
+.mv-topbar__social {
+    display: flex;
+    gap: 14px;
+}
+
+.mv-topbar__social i {
+    margin: 0;
+    color: inherit;
+}
+
+/* Language switcher partial renders flag buttons inside a legacy <ul>. */
+.mv-topbar__lang .top-head-left-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: none;
+}
+
+.mv-topbar__lang .top-head-left-bar li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.mv-topbar__lang .top-head-left-bar li > i {
+    display: none;
+}
+
+.mv-topbar__lang form {
+    margin: 0;
+}
+
+.mv-topbar__lang button {
+    display: block;
+    padding: 2px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    line-height: 0;
+    transition: box-shadow .15s ease, transform .15s ease;
+}
+
+.mv-topbar__lang button:hover,
+.mv-topbar__lang button:focus {
+    box-shadow: 0 0 0 2px var(--mv-primary);
+    transform: scale(1.06);
+}
+
+.mv-topbar__lang .flag-img {
+    width: 22px;
+    height: 22px;
+    max-width: 22px;
+    max-height: 22px;
+    object-fit: cover;
+}
+
+/* ---------- Header: main nav ---------- */
+.mv-nav__inner {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    min-height: var(--mv-header-h);
+}
+
+.mv-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: var(--mv-navy);
+    text-decoration: none;
+}
+
+.mv-logo:hover,
+.mv-logo:focus {
+    color: var(--mv-navy);
+    text-decoration: none;
+}
+
+.mv-logo__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+    font-size: 18px;
+}
+
+.mv-logo__text {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: .04em;
+}
+
+.mv-nav__menu {
+    flex: 1;
+}
+
+.mv-menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mv-menu a {
+    position: relative;
+    display: block;
+    padding: 10px 14px;
+    border-radius: var(--mv-radius-sm);
+    color: var(--mv-ink);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.mv-menu a:hover,
+.mv-menu a:focus {
+    background: var(--mv-surface);
+    color: var(--mv-navy);
+}
+
+.mv-menu .active > a {
+    color: var(--mv-navy);
+    font-weight: 700;
+}
+
+/* Yellow underline: always on for the current page, slides in on hover for the others. */
+.mv-menu a::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 2px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--mv-primary);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .2s ease;
+}
+
+.mv-menu a:hover::after,
+.mv-menu a:focus-visible::after {
+    transform: scaleX(1);
+    opacity: .55;
+}
+
+.mv-menu .active > a::after,
+.mv-menu .active > a:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.mv-nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+/* _LoginPartial: "Connect" link when signed out, dropdown when signed in. */
+.mv-account .login_register_btn.register-btn,
+.mv-account .dropdown > button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 38px;
+    padding: 0 16px;
+    border: 1.5px solid var(--mv-line);
+    border-radius: var(--mv-radius-pill);
+    background: var(--mv-white);
+    color: var(--mv-ink);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color .15s ease, color .15s ease;
+}
+
+.mv-account .login_register_btn.register-btn::before {
+    content: "\f2be"; /* fa-user-circle-o */
+    font-family: FontAwesome;
+    font-weight: normal;
+    color: var(--mv-primary-600);
+}
+
+.mv-account .login_register_btn.register-btn:hover,
+.mv-account .dropdown > button:hover {
+    border-color: var(--mv-navy);
+    color: var(--mv-navy);
+}
+
+.mv-account .dropdown-menu {
+    right: 0;
+    left: auto;
+    margin-top: 8px;
+    padding: 6px;
+    border: 1px solid var(--mv-line);
+    border-radius: var(--mv-radius-sm);
+    box-shadow: var(--mv-shadow);
+}
+
+.mv-account .dropdown-menu > li > a {
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--mv-ink);
+}
+
+.mv-nav__toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 0;
+    border: 1.5px solid var(--mv-line);
+    border-radius: 12px;
+    background: var(--mv-white);
+    color: var(--mv-navy);
+    font-size: 18px;
+}
+
+@media (min-width: 992px) {
+    /* Bootstrap 3's .collapse hides the menu; on desktop it is always visible. */
+    .mv-nav__menu.collapse {
+        display: flex !important;
+        align-items: center;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .mv-nav__inner {
+        gap: 16px;
+    }
+
+    .mv-menu a {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    /* An expanded mobile menu inside a sticky header could not be scrolled. */
+    .mv-header {
+        position: relative;
+    }
+
+    .mv-nav__inner {
+        flex-wrap: wrap;
+        min-height: 64px;
+    }
+
+    .mv-nav__toggle {
+        display: inline-flex;
+    }
+
+    .mv-nav__menu {
+        flex-basis: 100%;
+        order: 3;
+    }
+
+    .mv-nav__menu.in,
+    .mv-nav__menu.collapsing {
+        display: block;
+    }
+
+    .mv-menu {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding: 8px 0 12px;
+        border-top: 1px solid var(--mv-line);
+    }
+
+    .mv-menu a {
+        padding: 12px 8px;
+        font-size: 16px;
+    }
+
+    /* Stacked menu: the underline becomes a bar on the left. */
+    .mv-menu a::after {
+        left: 0;
+        right: auto;
+        top: 12px;
+        bottom: 12px;
+        width: 3px;
+        height: auto;
+        transform: scaleY(0);
+        transform-origin: center;
+    }
+
+    .mv-menu a:hover::after,
+    .mv-menu a:focus-visible::after,
+    .mv-menu .active > a::after {
+        transform: scaleY(1);
+    }
+
+    .mv-nav__actions {
+        flex-wrap: wrap;
+        margin: 0 0 16px;
+    }
+
+    .mv-nav__actions .mv-btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .mv-topbar__inner {
+        min-height: 36px;
+    }
+
+    .mv-topbar__social,
+    .mv-topbar__consult {
+        display: none !important;
+    }
+
+    .mv-topbar__links {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .mv-topbar__phone span {
+        display: none;
+    }
+}
+
+/* ---------- Footer ---------- */
+.mv-footer {
+    /* Same photo as the old theme footer (style.css .moverspackers-footer-one) under a navy tint so the light text stays readable. */
+    background:
+        linear-gradient(rgba(26, 29, 42, .88), rgba(26, 29, 42, .88)),
+        url(../extra-images/footer-back-img1.jpg) top center / cover no-repeat;
+    background-color: var(--mv-navy-900);
+    color: rgba(255, 255, 255, .7);
+    font-family: var(--mv-font);
+    font-size: 15px;
+}
+
+.mv-footer a {
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    transition: color .15s ease;
+}
+
+.mv-footer a:hover,
+.mv-footer a:focus {
+    color: var(--mv-primary);
+}
+
+.mv-footer__grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding: 64px 0 48px;
+}
+
+.mv-footer .mv-logo,
+.mv-footer .mv-logo:hover {
+    color: var(--mv-white);
+}
+
+.mv-footer__about {
+    max-width: 320px;
+    margin: 18px 0 22px;
+    line-height: 1.65;
+}
+
+.mv-footer__title {
+    margin: 6px 0 18px;
+    color: var(--mv-white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.mv-footer__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mv-footer__list li {
+    margin-bottom: 12px;
+}
+
+.mv-footer__list i {
+    width: 18px;
+    margin-right: 8px;
+    color: var(--mv-primary);
+}
+
+.mv-social {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mv-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 50%;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.mv-social a:hover,
+.mv-social a:focus {
+    border-color: var(--mv-primary);
+    background: var(--mv-primary);
+    color: var(--mv-navy);
+}
+
+.mv-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    font-size: 14px;
+}
+
+.mv-footer__bottom p {
+    margin: 0;
+}
+
+.mv-footer__legal {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (max-width: 991px) {
+    .mv-footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .mv-footer__grid {
+        grid-template-columns: 1fr;
+        padding: 48px 0 32px;
+    }
+}
+
+/* Legacy scroll-to-top button, restyled to match. */
+#scroll-to-top {
+    border: 0;
+    border-radius: 50%;
+    background: var(--mv-navy);
+    box-shadow: var(--mv-shadow);
+}

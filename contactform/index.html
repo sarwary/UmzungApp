@@ -1,0 +1,581 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us - Quote</title>
+    
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/fonts/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/flaticon.css" rel="stylesheet">
+    <link href="/assets/css/slick-slider.css" rel="stylesheet">
+    <link href="/assets/css/fancybox.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
+    <link href="/assets/css/color.css" rel="stylesheet">
+    <link href="/assets/css/responsive.css" rel="stylesheet">
+    <link href="/assets/css/site-modern.css" rel="stylesheet">
+    <link href="/lib/toastr/build/toastr.min.css" rel="stylesheet">
+    <link href="/assets/css/toast-theme.css" rel="stylesheet">
+    <link href="/assets/css/form-pages.css" rel="stylesheet">
+    <link href="/assets/css/app-pages.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/datepickar/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/datepicker.css">
+
+    <!--ClockPicker css-->
+    <link rel="stylesheet" href="/assets/css/timepicker.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="/lib/angular/angular.min.js?v=1.0"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCsujhwZzzADcRYIVJ7WnRWWE0RsLrUSkE"></script>
+
+    
+</head>
+<body dir="ltr">
+    <div class="moverspackers-main-wrapper">
+        <header id="moverspackers-header" class="mv-header">
+            <div class="mv-topbar">
+                <div class="mv-container mv-topbar__inner">
+                    <div class="mv-topbar__lang">
+                        
+
+<style>
+    .flag-img {
+        max-height: 30px;
+        max-width: 30px;
+        border-radius: 50px;
+        height: 30px;
+        width: 30px;
+    }
+</style>
+<ul class="moverspackers-strip-info top-head-left-bar">
+    <li>
+        <i class="flaticon moverspackers-telephone"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fcontactform">
+            <input type="hidden" name="culture" value="en-US" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/Uk.jpg" alt="En" title="En" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vgUJ4y-cUNLCtKc5-qNYk_lm5s3LxdVLt-WOV8LTe0t-XHzECofKQLSUm42pTBxVN0k9wRFHkQzi_U-EBU9fgPWN3fFo1T1t-FaIWsKxeNj6_ibjKvW45-YSK_055dU7g" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-lock"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fcontactform">
+            <input type="hidden" name="culture" value="de-DE" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/german.jpg" alt="De" title="De" /></button>
+
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vgUJ4y-cUNLCtKc5-qNYk_lm5s3LxdVLt-WOV8LTe0t-XHzECofKQLSUm42pTBxVN0k9wRFHkQzi_U-EBU9fgPWN3fFo1T1t-FaIWsKxeNj6_ibjKvW45-YSK_055dU7g" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-telephone"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fcontactform">
+            <input type="hidden" name="culture" value="fr-CH" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/franch.jpg" alt="Fr" title="Fr" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vgUJ4y-cUNLCtKc5-qNYk_lm5s3LxdVLt-WOV8LTe0t-XHzECofKQLSUm42pTBxVN0k9wRFHkQzi_U-EBU9fgPWN3fFo1T1t-FaIWsKxeNj6_ibjKvW45-YSK_055dU7g" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-lock"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fcontactform">
+            <input type="hidden" name="culture" value="it-CH" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/ilean.jpg"  alt="It" title="It" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vgUJ4y-cUNLCtKc5-qNYk_lm5s3LxdVLt-WOV8LTe0t-XHzECofKQLSUm42pTBxVN0k9wRFHkQzi_U-EBU9fgPWN3fFo1T1t-FaIWsKxeNj6_ibjKvW45-YSK_055dU7g" /></form>
+    </li>
+</ul>
+
+
+
+
+
+                    </div>
+                    <ul class="mv-topbar__links">
+                        <li class="mv-topbar__consult"><a href="/contactform"><i class="fa fa-calendar-check-o"></i>REQUEST CONSULTATION</a></li>
+                        <li><a href="https://wa.me/41783309595" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i>LIVE CHAT</a></li>
+                        <li class="mv-topbar__phone"><a href="tel:+41613134567"><i class="fa fa-phone"></i><span>+41 61 31 34567</span></a></li>
+                        <li class="mv-topbar__social">
+                            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mv-nav">
+                <div class="mv-container mv-nav__inner">
+                    <a href="/" class="mv-logo" aria-label="Home">
+                        <span class="mv-logo__mark"><i class="fa fa-truck"></i></span>
+                        <span class="mv-logo__text">LOGO</span>
+                    </a>
+                    <button type="button" class="mv-nav__toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="mv-nav__menu collapse" id="navbar-collapse-1">
+                        <ul class="mv-menu">
+                            <li class="">
+                                <a href="/">Moving</a>
+                            </li>
+                            <li class="">
+                                <a href="/index2">Final Cleaning</a>
+                            </li>
+                            <li class="active">
+                                <a href="/contactform" aria-current="page">Request Free Home Visit</a>
+                            </li>
+                            <li class="">
+                                <a href="/car/home">Reserve Van For Moving</a>
+                            </li>
+                            <li class="">
+                                <a href="/about">Become Our Partners</a>
+                            </li>
+                        </ul>
+                        <div class="mv-nav__actions">
+                            <div class="mv-account">
+                                
+
+<a class="login_register_btn register-btn" href="/register">Connect</a>
+
+
+
+                            </div>
+                            <a href="/#exTab2" class="mv-btn mv-btn--primary mv-btn--sm">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        
+        <div>
+            
+<section class="mv-auth-hero">
+    <div class="mv-container">
+        <ul class="mv-auth-hero__crumbs">
+            <li><a href="/">Homepage</a></li>
+            <li aria-current="page">Contact Us</li>
+        </ul>
+        <h1 class="mv-auth-hero__title">Request Free Home Visit</h1>
+        <p class="mv-auth-hero__lead">Please fill the following details and we will arrange our visit to see property as soon as possible. we will give you a reasonable quote during / after the visit</p>
+    </div>
+</section>
+
+<section class="mv-auth">
+    <div class="mv-container">
+        <div class="mv-contact__grid">
+
+            <div class="mv-auth-card mv-auth-card--featured">
+                <div class="mv-auth-card__head">
+                    <span class="mv-auth-card__icon" aria-hidden="true"><i class="fa fa-home"></i></span>
+                    <div>
+                        <h2 class="mv-auth-card__title">How can we Contact you?</h2>
+                        <p class="mv-auth-card__sub">It takes about two minutes. All fields are needed to plan the visit.</p>
+                    </div>
+                </div>
+
+                <form method="post" class="mv-auth-form" action="/Core/Contact/ContactRequest">
+
+                    <fieldset class="mv-contact__section">
+                        <legend class="mv-contact__legend"><span>1</span> Your details</legend>
+                        <div class="mv-field">
+                            <label class="mv-field__label" for="name">Full Name</label>
+                            <div class="mv-field__control">
+                                <i class="fa fa-user-o mv-field__icon" aria-hidden="true"></i>
+                                <input type="text" id="name" class="form-control mv-field__input" placeholder="Please enter your full name" required name="FullName" value="">
+                            </div>
+                        </div>
+                        <div class="mv-auth-form__split">
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="email">Email Address</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-envelope-o mv-field__icon" aria-hidden="true"></i>
+                                    <input type="email" id="email" class="form-control mv-field__input" placeholder="Please enter your email address" required name="Email" value="">
+                                </div>
+                            </div>
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="mobile">Phone Number</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-phone mv-field__icon" aria-hidden="true"></i>
+                                    <input type="number" id="mobile" class="form-control mv-field__input" placeholder="Please enter your mobile number" required name="PhoneNumber" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mv-contact__section">
+                        <legend class="mv-contact__legend"><span>2</span> Property</legend>
+                        <div class="mv-auth-form__split">
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="TypeOfService">Type of service</label>
+                                <div class="mv-field__control mv-field__control--select">
+                                    <i class="fa fa-truck mv-field__icon" aria-hidden="true"></i>
+                                    <select class="form-control mv-field__input" required id="TypeOfService" name="TypeOfService">
+                                        <option>Moving</option>
+                                        <option>Final guaranteed cleaning</option>
+                                        <option>Moving + Final guaranteed cleaning</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="PropertyType">Type of property</label>
+                                <div class="mv-field__control mv-field__control--select">
+                                    <i class="fa fa-building-o mv-field__icon" aria-hidden="true"></i>
+                                    <select class="form-control mv-field__input" required id="PropertyType" name="PropertyType">
+                                        <option>Empty Apartment/House</option>
+                                        <option>Furnished Apartment/House</option>
+                                        <option>Office/Commercial Property</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv-field">
+                            <label class="mv-field__label" for="NumberOfRoomsInProperty">Number of rooms in the property</label>
+                            <div class="mv-field__control mv-field__control--select">
+                                <i class="fa fa-th-large mv-field__icon" aria-hidden="true"></i>
+                                <select class="form-control mv-field__input" required id="NumberOfRoomsInProperty" name="NumberOfRoomsInProperty">
+                                    <option>0-50</option>
+                                    <option>1</option>
+                                    <option>1.5 </option>
+                                    <option>2 </option>
+                                    <option>2.5 </option>
+                                    <option>3 </option>
+                                    <option>3.5 </option>
+                                    <option>4 </option>
+                                    <option>4.5 </option>
+                                    <option>5 </option>
+                                    <option>5.5 </option>
+                                    <option>6 </option>
+                                    <option>6.5 </option>
+                                    <option>7 </option>
+                                    <option>7.5 </option>
+                                    <option>8 </option>
+                                    <option>8.5 </option>
+                                    <option>9 </option>
+                                    <option>9.5 </option>
+                                    <option>10 </option>
+                                    <option>10.5 </option>
+                                    <option>11</option>
+                                    <option>11.5 </option>
+                                    <option>12 </option>
+                                    <option>12.5 </option>
+                                    <option>13 </option>
+                                    <option>13.5 </option>
+                                    <option>14 </option>
+                                    <option>14.5 </option>
+                                    <option>15 </option>
+                                    <option>15.5 </option>
+                                    <option>16 </option>
+                                    <option>16.5 </option>
+                                    <option>17 </option>
+                                    <option>17.5 </option>
+                                    <option>18 </option>
+                                    <option>18.5 </option>
+                                    <option>19 </option>
+                                    <option>19.5 </option>
+                                    <option>20 </option>
+                                    <option>20.5 </option>
+                                    <option>21</option>
+                                    <option>21.5 </option>
+                                    <option>22 </option>
+                                    <option>22.5 </option>
+                                    <option>23 </option>
+                                    <option>23.5 </option>
+                                    <option>24 </option>
+                                    <option>24.5 </option>
+                                    <option>25 </option>
+                                    <option>25.5 </option>
+                                    <option>26 </option>
+                                    <option>26.5 </option>
+                                    <option>27 </option>
+                                    <option>27.5 </option>
+                                    <option>28 </option>
+                                    <option>28.5 </option>
+                                    <option>29 </option>
+                                    <option>29.5 </option>
+                                    <option>30 </option>
+                                    <option>30.5 </option>
+                                    <option>31</option>
+                                    <option>31.5 </option>
+                                    <option>32 </option>
+                                    <option>32.5 </option>
+                                    <option>33 </option>
+                                    <option>33.5 </option>
+                                    <option>34 </option>
+                                    <option>34.5 </option>
+                                    <option>35 </option>
+                                    <option>35.5 </option>
+                                    <option>36 </option>
+                                    <option>36.5 </option>
+                                    <option>37 </option>
+                                    <option>37.5 </option>
+                                    <option>38 </option>
+                                    <option>38.5 </option>
+                                    <option>39 </option>
+                                    <option>39.5 </option>
+                                    <option>40 </option>
+                                    <option>40.5 </option>
+                                    <option>41</option>
+                                    <option>41.5 </option>
+                                    <option>42 </option>
+                                    <option>42.5 </option>
+                                    <option>43 </option>
+                                    <option>43.5 </option>
+                                    <option>44 </option>
+                                    <option>44.5 </option>
+                                    <option>45 </option>
+                                    <option>45.5 </option>
+                                    <option>46 </option>
+                                    <option>46.5 </option>
+                                    <option>47 </option>
+                                    <option>47.5 </option>
+                                    <option>48 </option>
+                                    <option>48.5 </option>
+                                    <option>49 </option>
+                                    <option>49.5 </option>
+                                    <option>50 </option>
+                                    <option>50.5 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mv-auth-form__split">
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="Address">Address</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-map-marker mv-field__icon" aria-hidden="true"></i>
+                                    <input type="text" id="Address" class="form-control mv-field__input" placeholder="Please enter address" required name="Address" value="">
+                                </div>
+                            </div>
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="ZipCity">ZipCode/City</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-location-arrow mv-field__icon" aria-hidden="true"></i>
+                                    <input type="text" id="ZipCity" class="form-control mv-field__input" placeholder="Please enter ZIP code or city" required name="ZipCodeCity" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mv-contact__section">
+                        <legend class="mv-contact__legend"><span>3</span> Visit &amp; callback</legend>
+                        <div class="mv-auth-form__split">
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="ProposedDateToVisit">Proposed date of visit to the property</label>
+                                <div class="mv-field__control datepicker-bolg">
+                                    <i class="fa fa-calendar mv-field__icon" aria-hidden="true"></i>
+                                    <input type="text" data-select="datepicker" class="form-control mv-field__input" placeholder="Proposed Date" autocomplete="off" required id="ProposedDateToVisit" name="ProposedDateToVisit" value="">
+                                </div>
+                                <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="ProposedDateToVisit" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="VisitTime">Proposed time of visit to the property</label>
+                                <div class="mv-field__control clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
+                                    <i class="fa fa-clock-o mv-field__icon" aria-hidden="true"></i>
+                                    <input id="VisitTime" type="text" class="form-control mv-field__input" placeholder="Choose Time" autocomplete="off" name="ProposedTimeToVisitProperty" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv-auth-form__split">
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="AvailabilityToCallMonToFri">Time of availability for call (Monday to Friday)</label>
+                                <div class="mv-field__control mv-field__control--select">
+                                    <i class="fa fa-phone mv-field__icon" aria-hidden="true"></i>
+                                    <select class="form-control mv-field__input" required id="AvailabilityToCallMonToFri" name="AvailabilityToCallMonToFri">
+                                        <option>Morning (8:00 to 12:00)</option>
+                                        <option>Lunch time (12:00 to 14:00)</option>
+                                        <option>Afternoon (14:00 to 18:00)</option>
+                                        <option>Evening (18:00 to 20:00)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="AvailabilityToCallSatAndSun">Time of availability for call (Saturday/Sunday)</label>
+                                <div class="mv-field__control mv-field__control--select">
+                                    <i class="fa fa-phone mv-field__icon" aria-hidden="true"></i>
+                                    <select class="form-control mv-field__input" required id="AvailabilityToCallSatAndSun" name="AvailabilityToCallSatAndSun">
+                                        <option>Morning (8:00 to 12:00)</option>
+                                        <option>Lunch time (12:00 to 14:00)</option>
+                                        <option>Afternoon (14:00 to 18:00)</option>
+                                        <option>Evening (18:00 to 20:00)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="mv-btn mv-btn--primary mv-auth-form__submit">SUBMIT</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vgUJ4y-cUNLCtKc5-qNYk_lm5s3LxdVLt-WOV8LTe0t-XHzECofKQLSUm42pTBxVN0k9wRFHkQzi_U-EBU9fgPWN3fFo1T1t-FaIWsKxeNj6_ibjKvW45-YSK_055dU7g" /></form>
+            </div>
+
+            <aside class="mv-contact__aside">
+                <div class="mv-auth-card">
+                    <h2 class="mv-contact__aside-title">What happens next</h2>
+                    <ol class="mv-contact__steps">
+                        <li>
+                            <span>1</span>
+                            <div><strong>We call you back</strong><p>At the time slot you choose, to confirm the details.</p></div>
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <div><strong>We visit the property</strong><p>On your proposed date, to see what needs to be done.</p></div>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <div><strong>You get a fair quote</strong><p>During or right after the visit, with no obligation.</p></div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="mv-contact__call">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <div>
+                        <p>Prefer to talk?</p>
+                        <a href="tel:+41613134567">+41 61 31 34567</a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+        </div>
+
+        <footer id="moverspackers-footer" class="mv-footer">
+            <div class="mv-container">
+                <div class="mv-footer__grid">
+                    <div>
+                        <a href="/" class="mv-logo" aria-label="Home">
+                            <span class="mv-logo__mark"><i class="fa fa-truck"></i></span>
+                            <span class="mv-logo__text">LOGO</span>
+                        </a>
+                        <p class="mv-footer__about">we can help you to move and get professional final cleaning in SWITZERLAND.</p>
+                        <ul class="mv-social">
+                            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Service</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="/">Moving</a></li>
+                            <li><a href="/index2">Cleaning Service</a></li>
+                            <li><a href="/car/home">Van Rental</a></li>
+                            <li><a href="/contactform">Request Free Home Visit</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Quick Links</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/#how-it-works">How it Works</a></li>
+                            <li><a href="/about">Become Our Partners</a></li>
+                            <li><a href="/privacy">Privacy Policy</a></li>
+                            <li><a href="/TermCondition">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Contact Us</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="tel:+41613134567"><i class="fa fa-phone"></i>+41 61 31 34567</a></li>
+                            <li><a href="https://wa.me/41783309595" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i>LIVE CHAT</a></li>
+                            <li><i class="fa fa-map-marker"></i>Street 12,12 Swees</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mv-footer__bottom">
+                    <p><i class="fa fa-copyright"></i> 2026, Powered by <a href="https://fulminous.com/">Fulminous</a></p>
+                    <ul class="mv-footer__legal">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/TermCondition">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div id="shopModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+        <div id="productOverview" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content modal-padding">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <script>
+            window.simplGlobalSetting = {};
+            window.simplGlobalSetting.lang = 'en-US';
+    </script>
+
+
+
+    <a id="scroll-to-top" href="#" class="btn btn-primary btn-lg" role="button" data-toggle="tooltip" data-placement="left">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    <script type="text/javascript" src="/assets/script/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/script/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="/assets/script/slick.slider.js"></script>
+    <script type="text/javascript" src="/assets/script/fancybox.pack.js"></script>
+    <script type="text/javascript" src="/assets/script/isotope.min.js"></script>
+    <script type="text/javascript" src="/assets/script/numscroller.js"></script>
+    <script type="text/javascript" src="/assets/script/progressbar.js"></script>
+    <script type="text/javascript" src="/assets/script/functions.js"></script>
+    <script src="/assets/js/moment.min.js"></script>
+    <script src="/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datepicker JS -->
+    <script src="/assets/script/datepicker.js"></script>
+    <!--TimePicker JS-->
+    <script src="/assets/script/timepicker.js"></script>
+    <script src="/assets/script/main.js"></script>
+    <script src="/assets/js/script.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="/lib/multi-dropdown-menu/js/bootstrap-4-navbar.js?v=1.0"></script>
+    <script src="/lib/matchheight/jquery.matchHeight.js?v=1.0"></script>
+    <script src="/lib/toastr/build/toastr.min.js?v=1.0"></script>
+    <script>
+        // Site-wide toast defaults (styled by assets/css/toast-theme.css). Pages may still override positionClass.
+        toastr.options = $.extend(toastr.options, {
+            closeButton: true,
+            progressBar: true,
+            preventDuplicates: true,
+            newestOnTop: true,
+            positionClass: 'toast-top-center',
+            timeOut: 5000,
+            extendedTimeOut: 2000,
+            showDuration: 200,
+            hideDuration: 200
+        });
+    </script>
+    <script src="/lib/bootstrap-star-rating/js/star-rating.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.Core/main.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.ShoppingCart/add-to-cart.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.ProductComparison/product-comparison.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.WishList/wishlist.js?v=1.0"></script>
+    
+
+    <script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-78132767-2', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>

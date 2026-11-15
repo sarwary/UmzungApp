@@ -1,0 +1,473 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Authentication - Quote</title>
+    
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/fonts/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/flaticon.css" rel="stylesheet">
+    <link href="/assets/css/slick-slider.css" rel="stylesheet">
+    <link href="/assets/css/fancybox.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
+    <link href="/assets/css/color.css" rel="stylesheet">
+    <link href="/assets/css/responsive.css" rel="stylesheet">
+    <link href="/assets/css/site-modern.css" rel="stylesheet">
+    <link href="/lib/toastr/build/toastr.min.css" rel="stylesheet">
+    <link href="/assets/css/toast-theme.css" rel="stylesheet">
+    <link href="/assets/css/form-pages.css" rel="stylesheet">
+    <link href="/assets/css/app-pages.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/datepickar/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/datepicker.css">
+
+    <!--ClockPicker css-->
+    <link rel="stylesheet" href="/assets/css/timepicker.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="/lib/angular/angular.min.js?v=1.0"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCsujhwZzzADcRYIVJ7WnRWWE0RsLrUSkE"></script>
+
+    
+</head>
+<body dir="ltr">
+    <div class="moverspackers-main-wrapper">
+        <header id="moverspackers-header" class="mv-header">
+            <div class="mv-topbar">
+                <div class="mv-container mv-topbar__inner">
+                    <div class="mv-topbar__lang">
+                        
+
+<style>
+    .flag-img {
+        max-height: 30px;
+        max-width: 30px;
+        border-radius: 50px;
+        height: 30px;
+        width: 30px;
+    }
+</style>
+<ul class="moverspackers-strip-info top-head-left-bar">
+    <li>
+        <i class="flaticon moverspackers-telephone"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fregister">
+            <input type="hidden" name="culture" value="en-US" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/Uk.jpg" alt="En" title="En" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-lock"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fregister">
+            <input type="hidden" name="culture" value="de-DE" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/german.jpg" alt="De" title="De" /></button>
+
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-telephone"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fregister">
+            <input type="hidden" name="culture" value="fr-CH" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/franch.jpg" alt="Fr" title="Fr" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+    </li>
+    <li>
+        <i class="flaticon moverspackers-lock"></i>
+        <form method="post" id="lang-form" role="form" action="/Localization/Localization/SetLanguage?returnUrl=%2Fregister">
+            <input type="hidden" name="culture" value="it-CH" />
+            <button type="submit" style="background-color:inherit"><img class="flag-img" src="/assets/extra-images/ilean.jpg"  alt="It" title="It" /></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+    </li>
+</ul>
+
+
+
+
+
+                    </div>
+                    <ul class="mv-topbar__links">
+                        <li class="mv-topbar__consult"><a href="/contactform"><i class="fa fa-calendar-check-o"></i>REQUEST CONSULTATION</a></li>
+                        <li><a href="https://wa.me/41783309595" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i>LIVE CHAT</a></li>
+                        <li class="mv-topbar__phone"><a href="tel:+41613134567"><i class="fa fa-phone"></i><span>+41 61 31 34567</span></a></li>
+                        <li class="mv-topbar__social">
+                            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mv-nav">
+                <div class="mv-container mv-nav__inner">
+                    <a href="/" class="mv-logo" aria-label="Home">
+                        <span class="mv-logo__mark"><i class="fa fa-truck"></i></span>
+                        <span class="mv-logo__text">LOGO</span>
+                    </a>
+                    <button type="button" class="mv-nav__toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="mv-nav__menu collapse" id="navbar-collapse-1">
+                        <ul class="mv-menu">
+                            <li class="">
+                                <a href="/">Moving</a>
+                            </li>
+                            <li class="">
+                                <a href="/index2">Final Cleaning</a>
+                            </li>
+                            <li class="">
+                                <a href="/contactform">Request Free Home Visit</a>
+                            </li>
+                            <li class="">
+                                <a href="/car/home">Reserve Van For Moving</a>
+                            </li>
+                            <li class="">
+                                <a href="/about">Become Our Partners</a>
+                            </li>
+                        </ul>
+                        <div class="mv-nav__actions">
+                            <div class="mv-account">
+                                
+
+<a class="login_register_btn register-btn" href="/register">Connect</a>
+
+
+
+                            </div>
+                            <a href="/#exTab2" class="mv-btn mv-btn--primary mv-btn--sm">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        
+        <div>
+            
+<section class="mv-auth-hero">
+    <div class="mv-container">
+        <ul class="mv-auth-hero__crumbs">
+            <li><a href="/">Homepage</a></li>
+            <li aria-current="page">Authentication</li>
+        </ul>
+        <h1 class="mv-auth-hero__title">Authentication</h1>
+        <p class="mv-auth-hero__lead">Sign in to manage your moves, or create an account in under a minute.</p>
+    </div>
+</section>
+
+<section class="mv-auth">
+    <div class="mv-container">
+        <div class="mv-auth__grid">
+
+            <!-- Login -->
+            <div class="mv-auth-card">
+                <div class="mv-auth-card__head">
+                    <span class="mv-auth-card__icon" aria-hidden="true"><i class="fa fa-sign-in"></i></span>
+                    <div>
+                        <h2 class="mv-auth-card__title">Login your Account</h2>
+                        <p class="mv-auth-card__sub">Welcome back. Enter your details to continue.</p>
+                    </div>
+                </div>
+                <div id="login">
+                    <form method="post" class="mv-auth-form" action="/login">
+                        <div class="mv-field">
+                            <label class="mv-field__label" for="Email">Email</label>
+                            <div class="mv-field__control">
+                                <i class="fa fa-envelope-o mv-field__icon" aria-hidden="true"></i>
+                                <input class="form-control mv-field__input" placeholder="Please enter your email" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" value="" />
+                            </div>
+                            <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="mv-field">
+                            <div class="mv-field__row">
+                                <label class="mv-field__label" for="Password">Password</label>
+                                <a class="mv-auth-link resetPass" href="/Core/Account/ForgotPassword">Forgot your password?</a>
+                            </div>
+                            <div class="mv-field__control">
+                                <i class="fa fa-lock mv-field__icon" aria-hidden="true"></i>
+                                <input class="form-control mv-field__input" placeholder="Please enter your password" type="password" data-val="true" data-val-length="The Password must be at least 4 and at max 100 characters long." data-val-length-max="100" data-val-length-min="4" data-val-required="The Password field is required." id="Password" maxlength="100" name="Password" />
+                            </div>
+                            <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </div>
+
+                        <button type="submit" class="mv-btn mv-btn--dark mv-auth-form__submit">Log in</button>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+                </div>
+
+                <div class="modal fade" id="resetPassword" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+                            </div>
+                            <form action="" method="post">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="accountEmail">Account Email</label>
+                                        <input type="email" class="form-control" required name="accountEmail" value="" />
+                                        <span class="help-block">The email address associated with your Account.</span>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-sm btn-icon" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                    <button type="input" name="submit" value="resetPass" class="btn btn-success btn-sm btn-icon"><i class="fa fa-check-square-o"></i> Reset Password</button>
+                                </div>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Register -->
+            <div class="mv-auth-card mv-auth-card--featured">
+                <div class="mv-auth-card__head">
+                    <span class="mv-auth-card__icon" aria-hidden="true"><i class="fa fa-user-plus"></i></span>
+                    <div>
+                        <h2 class="mv-auth-card__title">Register your Account</h2>
+                        <p class="mv-auth-card__sub">Get quotes, track bookings and save your moves.</p>
+                    </div>
+                </div>
+                <div id="login">
+                    <form method="post" role="form" class="mv-auth-form" action="/register">
+                        <div class="mv-field">
+                            <label class="mv-field__label" for="FullName">Full name</label>
+                            <div class="mv-field__control">
+                                <i class="fa fa-user-o mv-field__icon" aria-hidden="true"></i>
+                                <input class="form-control mv-field__input" placeholder="Please enter your fullname" type="text" data-val="true" data-val-required="The Name field is required." id="FullName" name="FullName" value="" />
+                            </div>
+                            <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="mv-auth-form__split">
+                            <div class="mv-field">
+                                <label class="mv-field__label">Email</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-envelope-o mv-field__icon" aria-hidden="true"></i>
+                                    <input class="form-control mv-field__input" placeholder="Please enter your email" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" value="" />
+                                </div>
+                                <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="PhoneNumber">Mobile</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-phone mv-field__icon" aria-hidden="true"></i>
+                                    <input type="number" placeholder="Please enter your phone number" class="form-control mv-field__input" data-val="true" data-val-required="The Mobile field is required." id="PhoneNumber" name="PhoneNumber" value="" />
+                                </div>
+                                <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="mv-auth-form__split">
+                            <div class="mv-field">
+                                <label class="mv-field__label">Password</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-lock mv-field__icon" aria-hidden="true"></i>
+                                    <input class="form-control mv-field__input" placeholder="Please enter your password" type="password" data-val="true" data-val-length="The Password must be at least 4 and at max 100 characters long." data-val-length-max="100" data-val-length-min="4" data-val-required="The Password field is required." id="Password" maxlength="100" name="Password" />
+                                </div>
+                                <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="mv-field">
+                                <label class="mv-field__label" for="ConfirmPassword">Confirm password</label>
+                                <div class="mv-field__control">
+                                    <i class="fa fa-lock mv-field__icon" aria-hidden="true"></i>
+                                    <input class="form-control mv-field__input" placeholder="Please enter your password again" type="password" data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" />
+                                </div>
+                                <span class="text-danger mv-field__error field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="mv-btn mv-btn--primary mv-auth-form__submit">Register</button>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+                </div>
+
+                <div class="modal fade" id="resetPassword" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+                            </div>
+                            <form action="" method="post">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="accountEmail">Account Email</label>
+                                        <input type="email" class="form-control" required name="accountEmail" value="" />
+                                        <span class="help-block">The email address associated with your Account.</span>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-sm btn-icon" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                    <button type="input" name="submit" value="resetPass" class="btn btn-success btn-sm btn-icon"><i class="fa fa-check-square-o"></i> Reset Password</button>
+                                </div>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PvXYNuoHK9OkqmhRcmt0_vnvPoY0jM-fwSweLG_yc0DixTViuLaJrJvHSmGtD-Rxc6Sz5ACqGcD3mPMGLzPzh0jLy5q1T8EH8lgG3E5e2OzkoFGOKapawhVvPsTH1SoD6BEUJ4B03NQBbiK75zW-e0" /></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <ul class="mv-auth__perks">
+            <li><i class="fa fa-shield" aria-hidden="true"></i> Secure sign-in</li>
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i> Instant quotes</li>
+            <li><i class="fa fa-truck" aria-hidden="true"></i> Track every move</li>
+        </ul>
+    </div>
+</section>
+
+
+
+        </div>
+
+        <footer id="moverspackers-footer" class="mv-footer">
+            <div class="mv-container">
+                <div class="mv-footer__grid">
+                    <div>
+                        <a href="/" class="mv-logo" aria-label="Home">
+                            <span class="mv-logo__mark"><i class="fa fa-truck"></i></span>
+                            <span class="mv-logo__text">LOGO</span>
+                        </a>
+                        <p class="mv-footer__about">we can help you to move and get professional final cleaning in SWITZERLAND.</p>
+                        <ul class="mv-social">
+                            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Service</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="/">Moving</a></li>
+                            <li><a href="/index2">Cleaning Service</a></li>
+                            <li><a href="/car/home">Van Rental</a></li>
+                            <li><a href="/contactform">Request Free Home Visit</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Quick Links</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/#how-it-works">How it Works</a></li>
+                            <li><a href="/about">Become Our Partners</a></li>
+                            <li><a href="/privacy">Privacy Policy</a></li>
+                            <li><a href="/TermCondition">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mv-footer__title">Contact Us</h2>
+                        <ul class="mv-footer__list">
+                            <li><a href="tel:+41613134567"><i class="fa fa-phone"></i>+41 61 31 34567</a></li>
+                            <li><a href="https://wa.me/41783309595" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i>LIVE CHAT</a></li>
+                            <li><i class="fa fa-map-marker"></i>Street 12,12 Swees</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mv-footer__bottom">
+                    <p><i class="fa fa-copyright"></i> 2026, Powered by <a href="https://fulminous.com/">Fulminous</a></p>
+                    <ul class="mv-footer__legal">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/TermCondition">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div id="shopModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+        <div id="productOverview" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content modal-padding">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <script>
+            window.simplGlobalSetting = {};
+            window.simplGlobalSetting.lang = 'en-US';
+    </script>
+
+
+
+    <a id="scroll-to-top" href="#" class="btn btn-primary btn-lg" role="button" data-toggle="tooltip" data-placement="left">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    <script type="text/javascript" src="/assets/script/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/script/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="/assets/script/slick.slider.js"></script>
+    <script type="text/javascript" src="/assets/script/fancybox.pack.js"></script>
+    <script type="text/javascript" src="/assets/script/isotope.min.js"></script>
+    <script type="text/javascript" src="/assets/script/numscroller.js"></script>
+    <script type="text/javascript" src="/assets/script/progressbar.js"></script>
+    <script type="text/javascript" src="/assets/script/functions.js"></script>
+    <script src="/assets/js/moment.min.js"></script>
+    <script src="/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datepicker JS -->
+    <script src="/assets/script/datepicker.js"></script>
+    <!--TimePicker JS-->
+    <script src="/assets/script/timepicker.js"></script>
+    <script src="/assets/script/main.js"></script>
+    <script src="/assets/js/script.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="/lib/multi-dropdown-menu/js/bootstrap-4-navbar.js?v=1.0"></script>
+    <script src="/lib/matchheight/jquery.matchHeight.js?v=1.0"></script>
+    <script src="/lib/toastr/build/toastr.min.js?v=1.0"></script>
+    <script>
+        // Site-wide toast defaults (styled by assets/css/toast-theme.css). Pages may still override positionClass.
+        toastr.options = $.extend(toastr.options, {
+            closeButton: true,
+            progressBar: true,
+            preventDuplicates: true,
+            newestOnTop: true,
+            positionClass: 'toast-top-center',
+            timeOut: 5000,
+            extendedTimeOut: 2000,
+            showDuration: 200,
+            hideDuration: 200
+        });
+    </script>
+    <script src="/lib/bootstrap-star-rating/js/star-rating.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.Core/main.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.ShoppingCart/add-to-cart.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.ProductComparison/product-comparison.js?v=1.0"></script>
+    <script src="/_content/SimplCommerce.Module.WishList/wishlist.js?v=1.0"></script>
+    
+    
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js">
+    </script>
+<script>(window.jQuery && window.jQuery.validator||document.write("\u003Cscript src=\u0022/lib/jquery-validation/dist/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js">
+    </script>
+<script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\u003Cscript src=\u0022/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+
+
+
+    <script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-78132767-2', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>

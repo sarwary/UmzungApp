@@ -1,0 +1,699 @@
+/* Account, profile and misc pages (Core/Views/Account/*, Manage/*, UserAddress/*, TermCondition, Cms PageDetail,
+   Shared/404 + Error). Builds on site-modern.css, form-pages.css and app-pages.css (all loaded by _Layout);
+   only what those shared components don't cover lives here. */
+
+/* ---------- Single centred auth card under the photo hero ---------- */
+.mv-auth__single {
+    position: relative;
+    max-width: 520px;
+    margin: -60px auto 0;
+}
+
+.mv-auth__single--wide {
+    max-width: 600px;
+}
+
+/* Message-only card (confirmations, lockout, access denied, errors). */
+.mv-auth-card--center {
+    text-align: center;
+}
+
+.mv-auth-card--center .mv-auth-card__icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.mv-auth-card--center .mv-auth-card__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.mv-auth-card__icon--success {
+    background: #e7f6ee;
+    color: #16794a;
+}
+
+.mv-auth-card__icon--danger {
+    background: #fdeeec;
+    color: #b3321f;
+}
+
+.mv-auth-card__icon--navy {
+    background: var(--mv-navy);
+    color: var(--mv-primary);
+}
+
+.mv-auth-card__text {
+    max-width: 420px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: var(--mv-body);
+}
+
+.mv-auth-card__text + .mv-auth-card__text {
+    margin-top: 8px;
+}
+
+.mv-auth-card__text a {
+    font-weight: 600;
+    color: var(--mv-primary-ink);
+    text-decoration: underline;
+}
+
+.mv-auth-card__text a:hover,
+.mv-auth-card__text a:focus {
+    color: var(--mv-navy);
+}
+
+.mv-auth-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.mv-auth-card__foot {
+    margin: 22px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--mv-line);
+    font-size: 14px;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--mv-muted);
+}
+
+.mv-auth-card__foot .mv-auth-link {
+    font-size: 14px;
+}
+
+.mv-auth-note {
+    margin: 0 0 20px;
+    padding: 12px 14px;
+    border-radius: var(--mv-radius-sm);
+    background: var(--mv-primary-050);
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: var(--mv-ink);
+}
+
+.mv-auth-note strong {
+    color: var(--mv-navy);
+}
+
+/* ---------- Validation summary (asp-validation-summary) ---------- */
+.mv-validation.validation-summary-valid {
+    display: none;
+}
+
+.mv-validation.validation-summary-errors {
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    border: 1px solid #f3c2ba;
+    border-radius: var(--mv-radius-sm);
+    background: #fdf1ef;
+    color: #a3321f;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.mv-validation ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mv-validation li {
+    list-style: none;
+    line-height: 1.45;
+}
+
+.mv-validation li + li {
+    margin-top: 4px;
+}
+
+/* ---------- Checkbox row ---------- */
+.mv-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    margin: 0 0 12px;
+}
+
+.mv-check input[type="checkbox"] {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--mv-primary);
+    cursor: pointer;
+}
+
+.mv-check label {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--mv-ink);
+    cursor: pointer;
+}
+
+/* Inputs without a leading icon (address form, settings). */
+.mv-auth-form .form-control.mv-field__input.mv-field__input--plain {
+    padding-left: 14px;
+}
+
+.mv-auth-form .form-control.mv-field__input[readonly] {
+    background: var(--mv-surface);
+    color: var(--mv-muted);
+    cursor: not-allowed;
+}
+
+.mv-field__hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--mv-muted);
+}
+
+/* ---------- Account area ---------- */
+.mv-account-main {
+    min-width: 0;
+}
+
+.mv-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 20px;
+    padding: 12px 16px;
+    border: 1px solid #bfe5d0;
+    border-radius: var(--mv-radius-sm);
+    background: #e7f6ee;
+    color: #16794a;
+    font-size: 15px;
+    line-height: 1.45;
+    letter-spacing: normal;
+}
+
+.mv-status:empty {
+    display: none;
+}
+
+.mv-account-form {
+    max-width: 560px;
+}
+
+.mv-account-form .mv-auth-form__submit {
+    width: auto;
+    min-width: 180px;
+}
+
+.mv-form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.mv-form-actions .mv-auth-form__submit {
+    margin-top: 0;
+}
+
+/* Dashboard summary cards */
+.mv-account-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.mv-account-cards .mv-panel + .mv-panel {
+    margin-top: 0;
+}
+
+.mv-account-cards .mv-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.mv-account-cards .mv-panel__body {
+    flex: 1 1 auto;
+}
+
+.mv-panel__title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: var(--mv-primary-050);
+    color: var(--mv-primary-ink);
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.mv-dl--single {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.mv-dl--rows {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+}
+
+.mv-dl--rows > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--mv-line);
+}
+
+.mv-dl--rows > div:first-child {
+    padding-top: 0;
+}
+
+.mv-dl--rows > div:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.mv-dl--rows dt {
+    margin: 0;
+}
+
+.mv-dl--rows dd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mv-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: var(--mv-radius-pill);
+    background: var(--mv-surface);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mv-ink);
+}
+
+/* External logins list */
+.mv-login-list {
+    margin: 0;
+    padding: 0;
+}
+
+.mv-login-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--mv-line);
+    list-style: none;
+    line-height: 1.4;
+}
+
+.mv-login-list li:last-child {
+    border-bottom: 0;
+}
+
+.mv-login-list__name {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--mv-ink);
+}
+
+.mv-login-list form {
+    margin: 0;
+}
+
+.mv-provider-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+}
+
+/* Address book */
+.mv-address-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.mv-address-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid var(--mv-line);
+    border-radius: var(--mv-radius);
+    background: var(--mv-white);
+}
+
+.mv-address-card--default {
+    border-color: var(--mv-primary);
+    box-shadow: inset 0 3px 0 var(--mv-primary);
+}
+
+.mv-address-card__name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--mv-ink);
+}
+
+.mv-address-card__lines {
+    flex: 1 1 auto;
+    margin: 0 0 16px;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--mv-body);
+}
+
+.mv-address-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--mv-line);
+}
+
+.mv-address-card__actions form {
+    display: inline;
+    margin: 0;
+}
+
+.mv-link-btn,
+.mv-address-card__actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-family: var(--mv-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--mv-primary-ink);
+    cursor: pointer;
+}
+
+.mv-link-btn:hover,
+.mv-link-btn:focus,
+.mv-address-card__actions a:hover,
+.mv-address-card__actions a:focus {
+    color: var(--mv-navy);
+    text-decoration: underline;
+}
+
+.mv-link-btn:focus-visible,
+.mv-address-card__actions a:focus-visible {
+    outline: 3px solid rgba(255, 177, 24, .45);
+    outline-offset: 2px;
+}
+
+.mv-link-btn--danger {
+    color: #b3321f;
+}
+
+.mv-link-btn--danger:hover,
+.mv-link-btn--danger:focus {
+    color: #8c2415;
+}
+
+/* ---------- Prose (terms, privacy, CMS pages) ---------- */
+.mv-prose {
+    padding: 40px 44px;
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: var(--mv-body);
+    overflow-wrap: break-word;
+}
+
+.mv-prose > :first-child {
+    margin-top: 0;
+}
+
+.mv-prose > :last-child {
+    margin-bottom: 0;
+}
+
+.mv-prose p {
+    margin: 0 0 16px;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: normal;
+    color: inherit;
+}
+
+.mv-prose h1,
+.mv-prose h2,
+.mv-prose h3,
+.mv-prose h4 {
+    margin: 32px 0 12px;
+    font-family: var(--mv-font);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--mv-ink);
+}
+
+.mv-prose h1 { font-size: 28px; }
+.mv-prose h2 { font-size: 23px; }
+.mv-prose h3 { font-size: 20px; }
+.mv-prose h4 { font-size: 17px; }
+
+.mv-prose h2:first-child,
+.mv-prose h3:first-child {
+    margin-top: 0;
+}
+
+.mv-prose strong,
+.mv-prose b {
+    color: var(--mv-ink);
+}
+
+.mv-prose a {
+    font-weight: 500;
+    color: var(--mv-primary-ink);
+    text-decoration: underline;
+}
+
+.mv-prose a:hover,
+.mv-prose a:focus {
+    color: var(--mv-navy);
+}
+
+.mv-prose ul,
+.mv-prose ol {
+    margin: 0 0 18px;
+    padding-left: 0;
+}
+
+.mv-prose li {
+    position: relative;
+    margin: 0 0 10px;
+    padding-left: 26px;
+    list-style: none;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: normal;
+    color: inherit;
+}
+
+.mv-prose ul > li::before {
+    content: "";
+    position: absolute;
+    top: .72em;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--mv-primary);
+}
+
+.mv-prose ol {
+    counter-reset: mv-prose;
+}
+
+.mv-prose ol > li {
+    counter-increment: mv-prose;
+}
+
+.mv-prose ol > li::before {
+    content: counter(mv-prose) ".";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: var(--mv-primary-ink);
+}
+
+.mv-prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--mv-radius-sm);
+}
+
+.mv-prose table {
+    width: 100%;
+    margin: 0 0 18px;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.mv-prose th,
+.mv-prose td {
+    padding: 10px 12px;
+    border: 1px solid var(--mv-line);
+    text-align: left;
+}
+
+.mv-prose blockquote {
+    margin: 0 0 18px;
+    padding: 12px 18px;
+    border-left: 4px solid var(--mv-primary);
+    background: var(--mv-primary-050);
+    font-size: inherit;
+}
+
+.mv-prose-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 24px;
+    padding: 22px 24px;
+    border-radius: var(--mv-radius);
+    background: var(--mv-navy);
+    color: var(--mv-white);
+}
+
+.mv-prose-foot p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, .8);
+}
+
+.mv-prose-foot strong {
+    display: block;
+    font-size: 17px;
+    color: var(--mv-white);
+}
+
+/* ---------- Error pages (404 / Error) ---------- */
+.mv-error {
+    padding: 64px 0 80px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(255, 177, 24, .16), transparent 55%),
+        var(--mv-surface);
+    font-family: var(--mv-font);
+}
+
+.mv-error p {
+    letter-spacing: normal;
+}
+
+.mv-error .mv-auth-card {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.mv-error__code {
+    display: block;
+    margin: 0 0 6px;
+    font-size: clamp(56px, 10vw, 84px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -.02em;
+    color: var(--mv-navy);
+}
+
+.mv-error__code span {
+    color: var(--mv-primary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+    .mv-address-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .mv-account-cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .mv-prose {
+        padding: 26px 20px;
+        font-size: 16px;
+    }
+
+    .mv-login-list li {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .mv-account-form {
+        max-width: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .mv-auth__single .mv-auth-card--center {
+        padding: 28px 20px;
+    }
+
+    .mv-auth-card__actions .mv-btn,
+    .mv-form-actions .mv-btn,
+    .mv-account-form .mv-auth-form__submit,
+    .mv-prose-foot .mv-btn,
+    .mv-panel__head .mv-btn {
+        width: 100%;
+    }
+
+    .mv-error {
+        padding: 36px 0 56px;
+    }
+
+    .mv-error .mv-container {
+        padding: 0 16px;
+    }
+
+    .mv-page .mv-container {
+        padding: 0 16px;
+    }
+}

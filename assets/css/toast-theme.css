@@ -1,0 +1,210 @@
+/* Themed toastr notifications (toastr.success / error / warning / info) used across the site.
+   Loaded in the layouts after lib/toastr. Several pages also pull toastr.css from a CDN later in the
+   page, so selectors are prefixed with `html body` to win on specificity rather than load order.
+   toastr.css sets its type icons with !important, so the icon rules below need !important too. */
+
+html body #toast-container {
+    --toast-accent: var(--mv-navy, #272b3d);
+    --toast-tint: #eef0f5;
+}
+
+html body #toast-container > div.toast {
+    position: relative;
+    display: block;
+    width: 400px;
+    max-width: calc(100vw - 32px);
+    margin: 0 0 12px;
+    padding: 16px 48px 16px 64px;
+    overflow: hidden;
+    border: 1px solid var(--mv-line, #e5e8ef);
+    border-radius: 14px;
+    background-color: #ffffff;
+    background-position: 16px 14px;
+    background-repeat: no-repeat;
+    background-size: 34px 34px;
+    box-shadow: 0 1px 2px rgba(26, 29, 42, .06), 0 16px 40px rgba(26, 29, 42, .16);
+    color: var(--mv-ink, #1f2330);
+    font-family: var(--mv-font, 'Roboto', 'Segoe UI', Arial, sans-serif);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.45;
+    opacity: 1;
+    animation: mv-toast-in .28s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* Thin accent strip on the left edge, coloured per type. */
+html body #toast-container > div.toast::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background: var(--toast-accent);
+}
+
+html body #toast-container > div.toast:hover {
+    box-shadow: 0 1px 2px rgba(26, 29, 42, .06), 0 20px 48px rgba(26, 29, 42, .22);
+    cursor: default;
+}
+
+html body #toast-container > div.toast .toast-title {
+    margin-bottom: 2px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--mv-ink, #1f2330);
+}
+
+html body #toast-container > div.toast .toast-message {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    letter-spacing: normal;
+    word-wrap: break-word;
+    color: var(--mv-body, #4a5061);
+}
+
+html body #toast-container > div.toast .toast-title + .toast-message {
+    min-height: 0;
+}
+
+html body #toast-container > div.toast .toast-message a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Close button */
+html body #toast-container > div.toast .toast-close-button {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    float: none;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--mv-muted, #6b7183);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    text-shadow: none;
+    opacity: 1;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+html body #toast-container > div.toast .toast-close-button:hover,
+html body #toast-container > div.toast .toast-close-button:focus {
+    background: var(--mv-surface, #f5f7fb);
+    color: var(--mv-ink, #1f2330);
+    outline: none;
+}
+
+/* Countdown bar along the bottom (progressBar option). */
+html body #toast-container > div.toast .toast-progress {
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--toast-accent);
+    opacity: .55;
+}
+
+/* ---------- Variants: accent colour + icon in a tinted circle ---------- */
+html body #toast-container > div.toast-success {
+    --toast-accent: #1f9d55;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='17' fill='%23e3f5ea'/%3E%3Ccircle cx='17' cy='17' r='10' fill='%231f9d55'/%3E%3Cpath d='M12.8 17.3l2.8 2.8 5.6-5.8' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+
+html body #toast-container > div.toast-error {
+    --toast-accent: #d64532;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='17' fill='%23fce8e5'/%3E%3Ccircle cx='17' cy='17' r='10' fill='%23d64532'/%3E%3Cpath d='M17 12.2v6' stroke='%23fff' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='17' cy='21.6' r='1.35' fill='%23fff'/%3E%3C/svg%3E") !important;
+}
+
+/* Warnings use the brand yellow. */
+html body #toast-container > div.toast-warning {
+    --toast-accent: #ffb118;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='17' fill='%23fff5dc'/%3E%3Cpath d='M17 7.5L27 25H7z' fill='%23ffb118' stroke='%23ffb118' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M17 13.2v5.6' stroke='%23272b3d' stroke-width='2.1' stroke-linecap='round'/%3E%3Ccircle cx='17' cy='21.9' r='1.25' fill='%23272b3d'/%3E%3C/svg%3E") !important;
+}
+
+html body #toast-container > div.toast-info {
+    --toast-accent: #272b3d;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='17' fill='%23eef0f5'/%3E%3Ccircle cx='17' cy='17' r='10' fill='%23272b3d'/%3E%3Cpath d='M17 15.8v6' stroke='%23ffb118' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='17' cy='12.4' r='1.35' fill='%23ffb118'/%3E%3C/svg%3E") !important;
+}
+
+/* ---------- Positions ---------- */
+html body #toast-container.toast-top-center,
+html body #toast-container.toast-top-full-width {
+    top: 20px;
+}
+
+html body #toast-container.toast-top-right {
+    top: 20px;
+    right: 20px;
+}
+
+html body #toast-container.toast-bottom-right {
+    right: 20px;
+    bottom: 20px;
+}
+
+html body #toast-container.toast-top-center > div.toast,
+html body #toast-container.toast-bottom-center > div.toast {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes mv-toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html body #toast-container > div.toast {
+        animation: none;
+    }
+}
+
+@media (max-width: 480px) {
+    html body #toast-container > div.toast {
+        width: auto;
+        max-width: none;
+        margin: 0 12px 10px;
+        padding: 14px 44px 14px 58px;
+        background-position: 14px 12px;
+        background-size: 32px 32px;
+        font-size: 14px;
+    }
+
+    html body #toast-container > div.toast .toast-message {
+        min-height: 32px;
+    }
+
+    html body #toast-container > div.toast .toast-close-button {
+        top: 12px;
+        right: 10px;
+    }
+
+    html body #toast-container.toast-top-center,
+    html body #toast-container.toast-top-right,
+    html body #toast-container.toast-bottom-right {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    html body #toast-container.toast-top-center,
+    html body #toast-container.toast-top-right {
+        top: 12px;
+    }
+}
